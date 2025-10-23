@@ -291,7 +291,7 @@ const App = () => {
             >
               <Button 
                 className="relative group overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 px-6 py-2.5"
-                onClick={() => window.open('https://storage.googleapis.com/pharma-kiosk-ad218.appspot.com/uploads/DILG-251019-2498/Mat%20Resume%20%281%29.pdf?GoogleAccessId=firebase-adminsdk-cqbiu%40pharma-kiosk-ad218.iam.gserviceaccount.com&Expires=1898553600&Signature=r0g6%2FDA6RlskJKccPZrOTQD9AGYv6aUbshwnAmeN0lNklk7pgKPh8f5frQOj%2BWLOSjE4A0%2BL8YbZmWkis0wYnveQEfDcYoT8NiwplFKBWWPHtP5UXI3B8up0LkTiU0EAv598t3bF%2F%2BNSZmrqGG6Qw1gh0cjCpX1LrkUqGEGRotMpcq4FAQK4gn5%2BFdP6EoFvyQEQ%2Br%2B2TYuerjifVGUAn7o4LMzkT9vBlPCnJHYlGrsoZi8iY3MiIzmLGQZxZY29IMXz1YIfWZ28gblthiU0E3d%2BiRl8kwSjGr%2BxkHcpMfhUbSweK4A2Bl2x5tUXJfuJQFFj5c0FP7leWCjxJ4S5ig%3D%3D', '_blank')}
+                onClick={() => window.open('https://storage.googleapis.com/pharma-kiosk-ad218.appspot.com/uploads/DILG-251023-5723/Mat%20Resume%20%281%29.pdf?GoogleAccessId=firebase-adminsdk-cqbiu%40pharma-kiosk-ad218.iam.gserviceaccount.com&Expires=1898553600&Signature=i1d6c903wVhnKgFuQvvNppvuUvM4fHaq8gefLa7Zc4hNqw3BN9sx2vrj7nGgiZBXiigw55WmoDl5ZxlRjdP6cxivfI%2Fzbx0qIUxljOD%2FZIE%2FaQtrTZHZQI4GTVShzqWFCuyt1lWH74D4dnYlQdgu0n%2FFv31uHu5D7niI9o%2BgXqIjy3Xs467NtfjPS6KTqEBEGRH3FHCyXWDQ3Crz4WpHD361vgbxgj292DNi0WGn4kkOmzohu8npZWnx309T%2FTnIP%2BxERGMZM%2BZTxO5n9MYuBYkd9S9yF6FIhJUm1tUIRADJkxTieEiFkg8HLyhngaGmGj5fjQMiUdaMM7Tc7GvUyQ%3D%3D', '_blank')}
               >
                 <span className="relative z-10 flex items-center">
                   <Download className="w-4 h-4 mr-2" />
