@@ -691,7 +691,6 @@ const App = () => {
         </motion.div>
       </section>
 
-      {/* About Section */}
       <section id="about" ref={aboutRef} className={`py-32 relative ${sectionBg}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -724,7 +723,6 @@ const App = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              {/* Enhanced Journey Card */}
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
                 <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden`}>
