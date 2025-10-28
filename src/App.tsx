@@ -1488,7 +1488,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className={`relative py-20 border-t ${
         isDarkMode ? "border-gray-800" : "border-gray-300"
       }`}>
