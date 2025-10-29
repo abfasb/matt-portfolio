@@ -13,7 +13,6 @@ import {
   Calendar,
   Award,
   Code2,
-  Sparkles,
   ChevronRight,
   Download,
   ArrowUp,
@@ -32,15 +31,25 @@ import {
   Sun,
   Menu,
   X,
-  Hexagon,
-  CircuitBoard,
   Cpu,
-  Binary,
-  Network,
-  Cloud,
   Database,
+  Cloud,
   Terminal,
-  Workflow
+  Workflow,
+  Shield,
+  Server,
+  Layers,
+  Code,
+  FileCode,
+  Network,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  BarChart3,
+  Smartphone,
+  Monitor,
+  CloudLightning
 } from 'lucide-react';
 
 const App = () => {
@@ -111,226 +120,272 @@ const App = () => {
     setIsNavOpen(false);
   };
 
-  // Color variables for light/dark mode
-  const bgColor = isDarkMode ? "bg-gray-900" : "bg-white";
-  const textColor = isDarkMode ? "text-white" : "text-gray-900";
+  // Professional Color Scheme
+  const bgColor = isDarkMode ? "bg-gray-950" : "bg-white";
+  const textColor = isDarkMode ? "text-gray-100" : "text-gray-900";
   const secondaryTextColor = isDarkMode ? "text-gray-400" : "text-gray-600";
-  const cardBg = isDarkMode ? "bg-gray-800/80" : "bg-white/90";
-  const borderColor = isDarkMode ? "border-gray-700" : "border-gray-200";
-  const navBg = isDarkMode ? "bg-gray-900/95" : "bg-white/95";
-  const inputBg = isDarkMode ? "bg-gray-800" : "bg-gray-50";
+  const cardBg = isDarkMode ? "bg-gray-900/80" : "bg-white/90";
+  const borderColor = isDarkMode ? "border-gray-800" : "border-gray-200";
+  const navBg = isDarkMode ? "bg-gray-950/98" : "bg-white/98";
+  const inputBg = isDarkMode ? "bg-gray-900" : "bg-gray-50";
   const hoverBg = isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100";
   
   // Section-specific backgrounds
-  const sectionBg = isDarkMode ? "bg-gray-900" : "bg-gray-50";
-  const cardBorder = isDarkMode ? "border-gray-700" : "border-gray-200";
+  const sectionBg = isDarkMode ? "bg-gray-950" : "bg-gray-50";
+  const cardBorder = isDarkMode ? "border-gray-800" : "border-gray-200";
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-600";
   const accentText = isDarkMode ? "text-gray-300" : "text-gray-700";
 
-  // Innovative Navigation Data
+  // Professional Navigation Data
   const navSections = [
-    { id: 'home', label: 'Home', icon: <Cpu className="w-5 h-5" />, gradient: 'from-blue-500 to-cyan-500' },
-    { id: 'about', label: 'About', icon: <CircuitBoard className="w-5 h-5" />, gradient: 'from-purple-500 to-pink-500' },
-    { id: 'projects', label: 'Projects', icon: <Binary className="w-5 h-5" />, gradient: 'from-green-500 to-emerald-500' },
-    { id: 'experience', label: 'Journey', icon: <Workflow className="w-5 h-5" />, gradient: 'from-orange-500 to-red-500' },
-    { id: 'contact', label: 'Connect', icon: <Network className="w-5 h-5" />, gradient: 'from-yellow-500 to-amber-500' }
+    { id: 'home', label: 'Home', icon: <Cpu className="w-4 h-4" />, gradient: 'from-blue-600 to-cyan-600' },
+    { id: 'about', label: 'About', icon: <FileCode className="w-4 h-4" />, gradient: 'from-blue-600 to-indigo-600' },
+    { id: 'projects', label: 'Projects', icon: <Layers className="w-4 h-4" />, gradient: 'from-indigo-600 to-purple-600' },
+    { id: 'experience', label: 'Experience', icon: <Workflow className="w-4 h-4" />, gradient: 'from-purple-600 to-pink-600' },
+    { id: 'contact', label: 'Contact', icon: <Network className="w-4 h-4" />, gradient: 'from-pink-600 to-rose-600' }
   ];
 
   const projects = [
     {
-      title: "DILG Calapan City",
-      description: "Enterprise-grade document management system with advanced AI capabilities, automated classification, intelligent search algorithms, and comprehensive real-time analytics dashboard for efficient government operations.",
+      title: "DILG Calapan City - Enterprise DMS",
+      description: "Government-grade document management system with AI-powered classification, intelligent search, and real-time analytics dashboard for streamlined municipal operations.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       github: "https://github.com/abfasb/dilg-calapan-capstone-backend",
       live: "https://dilg-calapan.vercel.app",
-      category: "Government",
-      gradient: "from-blue-500 to-indigo-600",
-      icon: <Globe className="w-6 h-6" />,
-      status: "Live"
+      category: "Government SaaS",
+      gradient: "from-blue-600 to-indigo-700",
+      icon: <Shield className="w-5 h-5" />,
+      status: "Production",
+      features: ["AI Classification", "Real-time Analytics", "Secure Storage", "Workflow Automation"]
     },
     {
-      title: "KioskPharmaPOS",
-      description: "Revolutionary pharmacy POS with cutting-edge prescription AI featuring computer vision and deep learning for handwritten prescription recognition, inventory management, and patient safety checks.",
+      title: "KioskPharmaPOS - Healthcare Platform",
+      description: "Advanced pharmacy management system with computer vision for prescription recognition, inventory optimization, and patient safety protocols.",
       tech: ["React", "TypeScript", "Node.js", "Python", "OpenCV", "TensorFlow"],
       github: "https://github.com/abfasb/KioskPharmaPOS-frontend",
       live: "#",
-      category: "Healthcare",
-      gradient: "from-emerald-500 to-teal-600",
-      icon: <Brain className="w-6 h-6" />,
-      status: "In Development"
+      category: "Healthcare Tech",
+      gradient: "from-emerald-600 to-teal-700",
+      icon: <Brain className="w-5 h-5" />,
+      status: "In Development",
+      features: ["Computer Vision", "Inventory AI", "Safety Checks", "Patient Management"]
     },
     {
-      title: "Brightcares AutoParts",
-      description: "Advanced e-commerce platform with predictive analytics, machine learning-powered inventory optimization, customer behavior analysis, and automated intelligent restocking system.",
-      tech: ["React", "Firebase", "ML", "Tailwind", "Node.js", "Analytics"],
+      title: "Brightcares AutoParts - E-commerce",
+      description: "Intelligent e-commerce platform with predictive analytics, ML-powered inventory optimization, and automated restocking systems.",
+      tech: ["React", "Firebase", "Machine Learning", "Node.js", "Analytics"],
       github: "#",
       live: "https://brightcares-autoparts.firebaseapp.com/",
       category: "E-commerce",
-      gradient: "from-orange-500 to-red-600",
-      icon: <Rocket className="w-6 h-6" />,
-      status: "Live"
+      gradient: "from-orange-600 to-red-700",
+      icon: <Rocket className="w-5 h-5" />,
+      status: "Production",
+      features: ["Predictive Analytics", "ML Optimization", "Auto Restocking", "Customer Insights"]
     },
     {
-      title: "Learning Management System",
-      description: "Comprehensive educational platform with advanced course management, real-time collaboration tools, student performance tracking, and interactive learning modules for modern institutions.",
-      tech: ["Laravel", "MySQL", "JavaScript", "Bootstrap", "Docker", "Redis"],
+      title: "Enterprise Learning System",
+      description: "Comprehensive educational platform with course management, real-time collaboration, and advanced student performance tracking.",
+      tech: ["Laravel", "MySQL", "JavaScript", "Docker", "Redis", "WebSockets"],
       github: "https://github.com/abfasb/web2-system",
       live: "#",
-      category: "Education",
-      gradient: "from-violet-500 to-purple-600",
-      icon: <Star className="w-6 h-6" />,
-      status: "Completed"
+      category: "EdTech",
+      gradient: "from-violet-600 to-purple-700",
+      icon: <GraduationCap className="w-5 h-5" />,
+      status: "Completed",
+      features: ["Real-time Collaboration", "Progress Tracking", "Course Management", "Scalable Infrastructure"]
     }
   ];
 
   const experiences = [
     {
       role: "Full Stack Developer",
-      company: "Freelance & Side Projects",
+      company: "Enterprise Solutions & Consulting",
       period: "2023 - Present",
       description: "Architecting and developing enterprise-grade full-stack applications with modern tech stacks. Specializing in React, TypeScript, Node.js ecosystems, and seamless AI/ML integration for scalable, production-ready solutions.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
-      icon: <Code2 className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-600",
-      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects", "100% client satisfaction rate"]
+      icon: <Code2 className="w-5 h-5" />,
+      color: "from-blue-600 to-cyan-700",
+      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects", "100% client satisfaction rate"],
+      type: "Professional"
     },
     {
-      role: "BSIT Student",
+      role: "BSIT Student - Software Architecture",
       company: "Information Technology",
       period: "2022 - 2026",
-      description: "Pursuing Bachelor of Science in Information Technology with intensive focus on advanced software architecture, AI/ML integration, cloud computing, and cutting-edge web technologies.",
-      tech: ["Academic Research", "Open Source", "Innovation"],
-      icon: <GraduationCap className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-600",
-      achievements: ["Maintained 3.8+ GPA", "Published 2 research papers", "Led 5 team projects"]
+      description: "Pursuing Bachelor of Science in Information Technology with intensive focus on advanced software architecture, AI/ML integration, cloud computing, and enterprise web technologies.",
+      tech: ["Software Architecture", "Cloud Computing", "AI/ML Research"],
+      icon: <GraduationCap className="w-5 h-5" />,
+      color: "from-indigo-600 to-purple-700",
+      achievements: ["Maintained 3.8+ GPA", "Published research papers", "Led technical teams"],
+      type: "Education"
     }
   ];
 
   const stats = [
-    { label: "Projects Delivered", value: "15+", icon: <Target className="w-5 h-5" />, color: "from-blue-500 to-cyan-600", suffix: "" },
-    { label: "Tech Stack", value: "20+", icon: <Zap className="w-5 h-5" />, color: "from-purple-500 to-pink-600", suffix: "Technologies" },
-    { label: "Experience", value: "3", icon: <TrendingUp className="w-5 h-5" />, color: "from-emerald-500 to-teal-600", suffix: "Years" },
-    { label: "Satisfied Clients", value: "10+", icon: <Users className="w-5 h-5" />, color: "from-orange-500 to-red-600", suffix: "Clients" }
+    { label: "Projects Delivered", value: "15+", icon: <Target className="w-4 h-4" />, color: "from-blue-600 to-cyan-700", suffix: "Enterprise Solutions" },
+    { label: "Technologies", value: "20+", icon: <Zap className="w-4 h-4" />, color: "from-indigo-600 to-purple-700", suffix: "Modern Stack" },
+    { label: "Experience", value: "3", icon: <TrendingUp className="w-4 h-4" />, color: "from-emerald-600 to-teal-700", suffix: "Years" },
+    { label: "Enterprise Clients", value: "10+", icon: <Users className="w-4 h-4" />, color: "from-orange-600 to-red-700", suffix: "Satisfied" }
   ];
 
   const skills = [
     { 
-      category: "Frontend Excellence", 
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Redux", "Bootstrap"], 
-      color: "from-blue-500 to-cyan-600",
-      icon: <Code2 className="w-5 h-5" />,
+      category: "Frontend Architecture", 
+      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "State Management"], 
+      color: "from-blue-600 to-cyan-700",
+      icon: <Monitor className="w-4 h-4" />,
       level: 95
     },
     { 
-      category: "Backend Mastery", 
-      items: ["Node.js", "Express", "Laravel", "Django", "Python", "C#"], 
-      color: "from-purple-500 to-pink-600",
-      icon: <Database className="w-5 h-5" />,
+      category: "Backend Systems", 
+      items: ["Node.js", "Express", "Laravel", "Python", "API Design", "Microservices"], 
+      color: "from-indigo-600 to-purple-700",
+      icon: <Server className="w-4 h-4" />,
       level: 90
     },
     { 
-      category: "Database & Storage", 
-      items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma", "Redis", "Supabase"], 
-      color: "from-emerald-500 to-teal-600",
-      icon: <Cloud className="w-5 h-5" />,
+      category: "Data & Infrastructure", 
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma", "Redis"], 
+      color: "from-emerald-600 to-teal-700",
+      icon: <Database className="w-4 h-4" />,
       level: 88
     },
     { 
       category: "DevOps & Cloud", 
-      items: ["Docker", "Kubernetes", "AWS", "Vercel", "CI/CD", "GitHub Actions"], 
-      color: "from-orange-500 to-red-600",
-      icon: <Terminal className="w-5 h-5" />,
+      items: ["Docker", "AWS", "Vercel", "CI/CD", "GitHub Actions", "Infrastructure"], 
+      color: "from-orange-600 to-red-700",
+      icon: <Cloud className="w-4 h-4" />,
       level: 85
     }
   ];
 
   const achievements = [
     {
-      title: "Hack4Gov Mimaropa Placer",
+      title: "Hack4Gov Mimaropa Finalist",
       year: "2024-2025",
-      description: "Secured placement in prestigious regional government hackathon",
-      icon: <Award className="w-5 h-5" />,
-      color: "from-yellow-500 to-orange-500"
+      description: "Selected as finalist in prestigious regional government innovation hackathon",
+      icon: <Award className="w-4 h-4" />,
+      color: "from-yellow-600 to-orange-600"
     },
     {
       title: "Open Source Contributor",
-      year: "2023",
-      description: "Active contributor to major open source projects and communities",
-      icon: <Code2 className="w-5 h-5" />,
-      color: "from-blue-500 to-purple-500"
+      year: "2023-Present",
+      description: "Active contributor to major open source projects and developer communities",
+      icon: <Code className="w-4 h-4" />,
+      color: "from-blue-600 to-indigo-600"
     },
     {
-      title: "Computer Literacy Excellence",
+      title: "Technical Excellence Awards",
       year: "2012-2016",
-      description: "Multiple-time recipient of computer literacy awards",
-      icon: <Sparkles className="w-5 h-5" />,
-      color: "from-pink-500 to-red-500"
+      description: "Multiple-time recipient of computer science and technical excellence awards",
+      icon: <Star className="w-4 h-4" />,
+      color: "from-purple-600 to-pink-600"
+    }
+  ];
+
+  const services = [
+    {
+      title: "Enterprise Web Development",
+      description: "Scalable, maintainable web applications built with modern architecture patterns",
+      icon: <Code2 className="w-6 h-6" />,
+      color: "from-blue-600 to-cyan-600",
+      features: ["React/Next.js", "TypeScript", "Scalable Architecture", "Performance Optimization"]
+    },
+    {
+      title: "AI/ML Integration",
+      description: "Intelligent solutions with machine learning and artificial intelligence capabilities",
+      icon: <Brain className="w-6 h-6" />,
+      color: "from-indigo-600 to-purple-600",
+      features: ["Computer Vision", "Predictive Analytics", "Natural Language Processing", "Automation"]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Robust cloud solutions with focus on scalability, security, and reliability",
+      icon: <CloudLightning className="w-6 h-6" />,
+      color: "from-emerald-600 to-teal-600",
+      features: ["AWS/Azure", "Docker/Kubernetes", "CI/CD Pipelines", "Monitoring & Logging"]
     }
   ];
 
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
+      {/* Enhanced Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className={`absolute inset-0 ${
           isDarkMode 
-            ? "bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900" 
-            : "bg-gradient-to-br from-blue-50 via-purple-50 to-gray-50"
+            ? "bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" 
+            : "bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50"
         }`}></div>
-        <div className="absolute inset-0 opacity-30">
-          <div className={`absolute top-1/4 left-1/4 w-72 h-72 ${
-            isDarkMode ? "bg-blue-500/10" : "bg-blue-500/20"
-          } rounded-full blur-3xl animate-pulse`}></div>
-          <div className={`absolute top-3/4 right-1/4 w-96 h-96 ${
-            isDarkMode ? "bg-purple-500/10" : "bg-purple-500/20"
-          } rounded-full blur-3xl animate-pulse delay-1000`}></div>
-          <div className={`absolute bottom-1/4 left-1/2 w-64 h-64 ${
-            isDarkMode ? "bg-cyan-500/10" : "bg-cyan-500/20"
-          } rounded-full blur-3xl animate-pulse delay-500`}></div>
-        </div>
-        {/* Grid Pattern */}
-        <div className={`absolute inset-0 opacity-10 ${
+        
+        {/* Subtle Grid */}
+        <div className={`absolute inset-0 opacity-20 ${
           isDarkMode 
-            ? "bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)]" 
-            : "bg-[linear-gradient(rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.1)_1px,transparent_1px)]"
-        } bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]`}></div>
+            ? "bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]" 
+            : "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)]"
+        } bg-[size:64px_64px]`}></div>
+
+        {/* Subtle Particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className={`absolute w-1 h-1 ${
+                isDarkMode ? "bg-blue-500/20" : "bg-blue-500/10"
+              } rounded-full`}
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
+      {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 origin-left z-50"
         style={{ scaleX }}
       />
 
+      {/* Professional Navigation */}
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 w-full z-40 transition-all duration-500 ${
           scrolled 
-            ? `${navBg} backdrop-blur-2xl border-b ${borderColor} shadow-2xl` 
+            ? `${navBg} backdrop-blur-xl border-b ${borderColor} shadow-lg` 
             : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
+            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="relative group"
+              className="flex items-center space-x-4"
             >
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
-              <div className={`relative flex items-center space-x-3 ${
-                isDarkMode ? "bg-gray-900" : "bg-white"
-              } rounded-2xl px-6 py-3`}>
-                <div className="relative">
-                  <img className="w-8 h-8 rounded-full" src="https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg" alt='Matt Logo' />
-                  <div className="absolute inset-0 "></div>
+              <div className={`w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg`}>
+                <Code className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Matthew Balinton
                 </div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  MB
-                </div>
+                <div className={`text-xs ${mutedText}`}>Enterprise Developer</div>
               </div>
             </motion.div>
 
-            {/* Desktop Navigation - Hexagon Grid */}
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               {navSections.map((item, idx) => (
                 <motion.button
@@ -338,56 +393,42 @@ const App = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`relative group p-2 transition-all duration-300 ${
-                    activeSection === item.id ? 'scale-110' : 'scale-100'
+                  className={`relative px-6 py-3 transition-all duration-300 ${
+                    activeSection === item.id 
+                      ? 'text-white' 
+                      : `${mutedText} hover:text-white`
                   }`}
                   onClick={() => scrollToSection(item.id)}
                 >
-                  {/* Hexagon Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-xl transform rotate-45 scale-75 opacity-0 group-hover:opacity-100 transition-all duration-300 ${
-                    activeSection === item.id ? 'opacity-100 scale-100' : ''
-                  }`}></div>
-                  
-                  {/* Content */}
-                  <div className="relative z-10 flex items-center space-x-2 px-4 py-3">
-                    <div className={`transition-colors duration-300 ${
-                      activeSection === item.id ? 'text-white' : isDarkMode ? 'text-gray-400' : 'text-gray-600 group-hover:text-white'
-                    }`}>
-                      {item.icon}
-                    </div>
-                    <span className={`font-medium transition-colors duration-300 ${
-                      activeSection === item.id ? 'text-white' : isDarkMode ? 'text-gray-400' : 'text-gray-600 group-hover:text-white'
-                    }`}>
-                      {item.label}
-                    </span>
+                  <div className="flex items-center space-x-2">
+                    {item.icon}
+                    <span className="font-medium text-sm">{item.label}</span>
                   </div>
+                  
+                  {activeSection === item.id && (
+                    <motion.div
+                      layoutId="navIndicator"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"
+                    />
+                  )}
                 </motion.button>
               ))}
             </div>
 
             {/* Right Side Controls */}
             <div className="flex items-center space-x-4">
-              {/* Theme Toggle with Advanced Animation */}
+              {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
-                whileHover={{ scale: 1.1, rotate: 180 }}
-                whileTap={{ scale: 0.9 }}
-                className={`relative p-3 rounded-2xl transition-all duration-500 ${
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`p-3 rounded-xl border ${borderColor} ${
                   isDarkMode 
-                    ? 'bg-gradient-to-br from-purple-500/20 to-blue-500/20 text-cyan-400' 
-                    : 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 text-amber-600'
-                } border ${isDarkMode ? 'border-cyan-500/30' : 'border-amber-500/30'}`}
+                    ? 'bg-gray-900 text-cyan-400' 
+                    : 'bg-white text-amber-600'
+                } transition-colors`}
               >
-                <motion.div
-                  initial={false}
-                  animate={{ rotate: isDarkMode ? 0 : 180 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                </motion.div>
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${
-                  isDarkMode ? 'from-cyan-500 to-blue-500' : 'from-amber-500 to-orange-500'
-                } opacity-0 hover:opacity-20 transition-opacity duration-300`}></div>
+                {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </motion.button>
 
               {/* Resume Button */}
@@ -398,29 +439,24 @@ const App = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button 
-                  className="relative group overflow-hidden bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 px-6 py-3 rounded-2xl shadow-2xl"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white border-0 px-6 py-3 rounded-xl shadow-lg"
                   onClick={() => window.open('https://storage.googleapis.com/pharma-kiosk-ad218.appspot.com/uploads/DILG-251023-5723/Mat%20Resume%20%281%29.pdf?GoogleAccessId=firebase-adminsdk-cqbiu%40pharma-kiosk-ad218.iam.gserviceaccount.com&Expires=1898553600&Signature=i1d6c903wVhnKgFuQvvNppvuUvM4fHaq8gefLa7Zc4hNqw3BN9sx2vrj7nGgiZBXiigw55WmoDl5ZxlRjdP6cxivfI%2Fzbx0qIUxljOD%2FZIE%2FaQtrTZHZQI4GTVShzqWFCuyt1lWH74D4dnYlQdgu0n%2FFv31uHu5D7niI9o%2BgXqIjy3Xs467NtfjPS6KTqEBEGRH3FHCyXWDQ3Crz4WpHD361vgbxgj292DNi0WGn4kkOmzohu8npZWnx309T%2FTnIP%2BxERGMZM%2BZTxO5n9MYuBYkd9S9yF6FIhJUm1tUIRADJkxTieEiFkg8HLyhngaGmGj5fjQMiUdaMM7Tc7GvUyQ%3D%3D', '_blank')}
                 >
-                  <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <span className="relative z-10 flex items-center font-semibold">
-                    <Download className="w-4 h-4 mr-2" />
-                    Resume
-                  </span>
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
                 </Button>
               </motion.div>
 
               {/* Mobile Menu Button */}
               <motion.button
                 onClick={toggleNav}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className={`lg:hidden p-3 rounded-2xl ${
-                  isDarkMode 
-                    ? "bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400"
-                    : "bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-amber-500/30 text-amber-600"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`lg:hidden p-3 rounded-xl border ${borderColor} ${
+                  isDarkMode ? "bg-gray-900 text-gray-400" : "bg-white text-gray-600"
                 }`}
               >
-                {isNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isNavOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
               </motion.button>
             </div>
           </div>
@@ -435,18 +471,18 @@ const App = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className={`fixed inset-0 ${
-              isDarkMode ? "bg-black/80" : "bg-white/95"
-            } backdrop-blur-2xl z-30 lg:hidden`}
+              isDarkMode ? "bg-gray-950/95" : "bg-white/95"
+            } backdrop-blur-xl z-30 lg:hidden`}
             onClick={() => setIsNavOpen(false)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="flex items-center justify-center min-h-screen p-8"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="grid grid-cols-2 gap-6 max-w-md">
+              <div className="w-full max-w-sm space-y-4">
                 {navSections.map((item, idx) => (
                   <motion.button
                     key={item.id}
@@ -454,20 +490,20 @@ const App = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     onClick={() => scrollToSection(item.id)}
-                    className={`relative group p-6 rounded-3xl bg-gradient-to-br ${item.gradient} border-2 border-white/20 backdrop-blur-xl transition-all duration-300 ${
-                      activeSection === item.id ? 'scale-105 shadow-2xl' : 'scale-100 shadow-lg'
+                    className={`w-full flex items-center space-x-4 p-4 rounded-2xl border ${
+                      isDarkMode ? "border-gray-800 bg-gray-900" : "border-gray-200 bg-white"
+                    } transition-all duration-300 ${
+                      activeSection === item.id ? 'ring-2 ring-blue-500' : ''
                     }`}
                   >
-                    <div className="text-center space-y-3">
-                      <div className="flex justify-center">
-                        <div className={`p-3 rounded-2xl bg-white/10 backdrop-blur-sm ${
-                          activeSection === item.id ? 'scale-110' : ''
-                        } transition-transform duration-300`}>
-                          {item.icon}
-                        </div>
-                      </div>
-                      <div className="text-white font-semibold text-lg">{item.label}</div>
+                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${item.gradient} flex items-center justify-center text-white`}>
+                      {item.icon}
                     </div>
+                    <span className={`font-medium ${
+                      activeSection === item.id 
+                        ? 'text-white' 
+                        : mutedText
+                    }`}>{item.label}</span>
                   </motion.button>
                 ))}
               </div>
@@ -478,98 +514,57 @@ const App = () => {
 
       {/* Hero Section */}
       <section id="home" ref={heroRef} className="min-h-screen flex items-center justify-center relative pt-20">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            animate={{ 
-              rotate: 360,
-              scale: [1, 1.1, 1]
-            }}
-            transition={{ 
-              rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-              scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-            }}
-            className={`absolute top-1/4 left-1/4 w-96 h-96 ${
-              isDarkMode ? "bg-blue-500/5" : "bg-blue-500/10"
-            } rounded-full blur-3xl`}
-          />
-          <motion.div
-            animate={{ 
-              rotate: -360,
-              scale: [1.1, 1, 1.1]
-            }}
-            transition={{ 
-              rotate: { duration: 25, repeat: Infinity, ease: "linear" },
-              scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
-            }}
-            className={`absolute bottom-1/4 right-1/4 w-96 h-96 ${
-              isDarkMode ? "bg-purple-500/5" : "bg-purple-500/10"
-            } rounded-full blur-3xl`}
-          />
-        </div>
-
         <motion.div 
           style={{ opacity: heroOpacity, y: heroY }}
           className="max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full relative z-10"
         >
           <div className="text-center">
-            {/* Animated Badge */}
+            {/* Professional Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
+              className="inline-block mb-12"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={heroInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.4 }}
-                className="inline-block mb-8"
-              >
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
-                  <Badge className="relative bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 px-8 py-4 text-lg font-semibold backdrop-blur-sm">
-                    <Sparkles className="w-5 h-5 mr-2" />
-                    Available for Opportunities
-                  </Badge>
-                </div>
-              </motion.div>
+              <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-blue-400 text-sm font-medium">Available for Enterprise Projects</span>
+              </div>
             </motion.div>
 
-            {/* Main Heading with Advanced Typography */}
+            {/* Main Heading */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.6 }}
-              className="mb-8"
+              transition={{ delay: 0.4 }}
+              className="mb-12"
             >
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                   Matthew
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mt-2">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mt-2">
                   Balinton
                 </span>
               </h1>
               
               <motion.p 
-                className={`text-3xl md:text-4xl ${mutedText} mb-6 font-light`}
+                className={`text-2xl md:text-3xl ${mutedText} mb-8 font-light`}
+                initial={{ opacity: 0 }}
+                animate={heroInView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.6 }}
+              >
+                Enterprise Full Stack Developer
+              </motion.p>
+              
+              <motion.p 
+                className={`text-lg ${mutedText} max-w-3xl mx-auto leading-relaxed`}
                 initial={{ opacity: 0 }}
                 animate={heroInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.8 }}
               >
-                Full Stack Developer & 
-                <span className="text-transparent bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text font-semibold"> AI Innovator</span>
-              </motion.p>
-              
-              <motion.p 
-                className={`text-xl ${mutedText} max-w-4xl mx-auto mb-12 leading-relaxed`}
-                initial={{ opacity: 0 }}
-                animate={heroInView ? { opacity: 1 } : {}}
-                transition={{ delay: 1 }}
-              >
-                Crafting <span className="text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text font-semibold">next-generation digital experiences</span> with 
-                cutting-edge technologies and seamless 
-                <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-semibold"> AI integration</span>
+                Building scalable, maintainable software solutions for forward-thinking enterprises. 
+                Specializing in modern web technologies, cloud architecture, and AI integration.
               </motion.p>
             </motion.div>
 
@@ -577,24 +572,20 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.2 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+              transition={{ delay: 1 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             >
               <motion.div 
                 whileHover={{ scale: 1.05 }} 
                 whileTap={{ scale: 0.95 }}
-                className="relative"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-75 transition duration-500 group-hover:opacity-100"></div>
                 <Button 
                   size="lg"
-                  className="relative bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-12 py-6 text-lg border-0 rounded-2xl shadow-2xl"
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-base border-0 rounded-xl shadow-lg"
                   onClick={() => scrollToSection('projects')}
                 >
-                  <span className="relative z-10 flex items-center font-semibold">
-                    View My Work
-                    <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  View Enterprise Projects
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </motion.div>
               
@@ -605,84 +596,44 @@ const App = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className={`px-12 py-6 text-lg border-2 border-cyan-500/50 hover:border-cyan-400 ${
-                    isDarkMode ? "bg-transparent hover:bg-cyan-500/10 text-cyan-400" : "bg-transparent hover:bg-cyan-500/10 text-cyan-600"
-                  } rounded-2xl backdrop-blur-sm transition-all duration-300`}
+                  className={`px-8 py-4 text-base border-2 ${
+                    isDarkMode 
+                      ? "border-gray-700 hover:border-blue-500 text-blue-400" 
+                      : "border-gray-300 hover:border-blue-500 text-blue-600"
+                  } rounded-xl backdrop-blur-sm`}
                   onClick={() => scrollToSection('contact')}
                 >
-                  Get In Touch
+                  Start a Project
                 </Button>
               </motion.div>
-            </motion.div>
-
-            {/* Social Links with Hover Effects */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={heroInView ? { opacity: 1 } : {}}
-              transition={{ delay: 1.4 }}
-              className="flex justify-center gap-8 mb-16"
-            >
-              {[
-                { icon: Github, href: "https://github.com/abfasb", label: "GitHub", gradient: "from-gray-600 to-gray-800", color: isDarkMode ? "text-gray-400" : "text-gray-600" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/matthew-balinton-9478a7255/", label: "LinkedIn", gradient: "from-blue-600 to-blue-800", color: isDarkMode ? "text-blue-400" : "text-blue-600" },
-                { icon: Mail, href: "mailto:matthew.balinton@example.com", label: "Email", gradient: "from-red-500 to-pink-600", color: isDarkMode ? "text-red-400" : "text-red-600" }
-              ].map((social, idx) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={heroInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 1.4 + idx * 0.1 }}
-                  whileHover={{ scale: 1.2, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="relative group"
-                >
-                  <div className={`absolute -inset-2 bg-gradient-to-r ${social.gradient} rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-500`}></div>
-                  <div className={`relative p-5 rounded-2xl ${
-                    isDarkMode ? "bg-gray-800/50 border border-gray-700" : "bg-white/80 border border-gray-300"
-                  } group-hover:border-opacity-50 transition-all duration-300 backdrop-blur-sm ${social.color} group-hover:text-white`}>
-                    <social.icon className="w-7 h-7" />
-                  </div>
-                </motion.a>
-              ))}
             </motion.div>
 
             {/* Enhanced Stats Grid */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 1.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+              transition={{ delay: 1.2 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={heroInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 1.6 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="relative group"
+                  transition={{ delay: 1.2 + index * 0.1 }}
+                  className="text-center"
                 >
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${stat.color} rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-500`}></div>
-                  <div className={`relative ${
-                    isDarkMode ? "bg-gray-800/50 border border-gray-700" : "bg-white/80 border border-gray-300"
-                  } rounded-3xl p-8 backdrop-blur-sm`}>
-                    <div className={`flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.color} text-white shadow-lg`}>
-                      {stat.icon}
-                    </div>
-                    <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                      {stat.value}
-                    </div>
-                    <div className={`text-sm ${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    } font-medium`}>
-                      {stat.label}
-                      {stat.suffix && <span className={`block text-xs ${
-                        isDarkMode ? "text-gray-500" : "text-gray-500"
-                      } mt-1`}>{stat.suffix}</span>}
-                    </div>
+                  <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-r ${stat.color} flex items-center justify-center text-white shadow-lg`}>
+                    {stat.icon}
+                  </div>
+                  <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                    {stat.value}
+                  </div>
+                  <div className={`text-sm ${mutedText} font-medium`}>
+                    {stat.label}
+                  </div>
+                  <div className={`text-xs ${mutedText} mt-1`}>
+                    {stat.suffix}
                   </div>
                 </motion.div>
               ))}
@@ -691,348 +642,170 @@ const App = () => {
         </motion.div>
       </section>
 
-      <section id="about" ref={aboutRef} className={`py-32 relative ${sectionBg}`}>
+      {/* Services Section */}
+      <section className={`py-24 ${sectionBg}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={aboutInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div className="relative inline-block mb-6">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-75"></div>
-              <Badge className="relative bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0 px-8 py-4 text-base font-semibold">
-                <CircuitBoard className="w-5 h-5 mr-2" />
-                About Me
-              </Badge>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Innovation Through Code
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Enterprise Services
               </span>
             </h2>
-            <p className={`text-xl ${mutedText} max-w-3xl mx-auto`}>
-              Transforming visionary ideas into remarkable digital realities
+            <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
+              Comprehensive software development services tailored for enterprise needs
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden`}>
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
-                  <CardHeader className="pb-4">
-                    <CardTitle className={`text-3xl flex items-center ${
-                      isDarkMode ? "text-white" : "text-gray-900"
-                    }`}>
-                      My Journey
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-6 leading-relaxed text-lg">
-                    <p className={mutedText}>
-                      From writing my first "Hello World" in 2022 to architecting sophisticated enterprise applications, 
-                      my journey has been fueled by relentless curiosity and passion for technological innovation.
-                    </p>
-                    <p className={mutedText}>
-                      I specialize in crafting seamless digital experiences that bridge complex technical architecture 
-                      with intuitive user interfaces. Every project represents an opportunity to innovate, evolve, and 
-                      redefine possibilities.
-                    </p>
-                    <div className={`pt-6 border-t ${
-                      isDarkMode ? "border-gray-700" : "border-gray-300"
-                    }`}>
-                      <h4 className={`font-bold text-xl mb-6 flex items-center ${
-                        isDarkMode ? "text-cyan-400" : "text-cyan-600"
-                      }`}>
-                        <Award className="w-6 h-6 mr-3" />
-                        Professional Certifications
-                      </h4>
-                      <ul className="space-y-4">
-                        {["Fortinet Certified Associate in Cybersecurity", "Fortinet Certified Fundamentals in Cybersecurity"].map((cert, index) => (
-                          <motion.li 
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ delay: 0.5 + index * 0.1 }}
-                            className="flex items-start group/item"
-                          >
-                            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2.5 mr-4 flex-shrink-0 group-hover/item:scale-150 transition-transform"></div>
-                            <span className={`${mutedText} group-hover/item:${
-                              isDarkMode ? "text-white" : "text-gray-900"
-                            } transition-colors`}>{cert}</span>
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Enhanced Achievements Card */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
               <motion.div
+                key={service.title}
                 initial={{ opacity: 0, y: 30 }}
-                animate={aboutInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.4 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
                 className="relative group"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <Card className={`relative ${
-                  isDarkMode 
-                    ? "bg-gradient-to-br from-emerald-900/20 to-cyan-900/20 border border-emerald-500/20" 
-                    : "bg-gradient-to-br from-emerald-50 to-cyan-50 border border-emerald-500/30"
-                } backdrop-blur-xl overflow-hidden`}>
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
-                  <CardHeader>
-                    <CardTitle className={`text-3xl flex items-center ${
-                      isDarkMode ? "text-emerald-400" : "text-emerald-600"
+                <Card className={`h-full ${cardBg} border ${cardBorder} backdrop-blur-sm overflow-hidden transition-all duration-300 group-hover:shadow-xl`}>
+                  <div className={`h-2 bg-gradient-to-r ${service.color}`} />
+                  <CardHeader className="pb-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-white mb-4 shadow-lg`}>
+                      {service.icon}
+                    </div>
+                    <CardTitle className={`text-xl ${
+                      isDarkMode ? "text-white" : "text-gray-900"
                     }`}>
-                      Key Achievements
+                      {service.title}
                     </CardTitle>
+                    <CardDescription className={`${mutedText} leading-relaxed`}>
+                      {service.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      {achievements.map((achievement, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -30 }}
-                          animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ delay: 0.6 + index * 0.15 }}
-                          whileHover={{ scale: 1.03, x: 5 }}
-                          className="relative group/achievement"
-                        >
-                          <div className={`absolute -inset-0.5 bg-gradient-to-r ${achievement.color} rounded-2xl blur opacity-0 group-hover/achievement:opacity-50 transition duration-300`}></div>
-                          <div className={`relative flex items-start p-5 rounded-2xl ${
-                            isDarkMode ? "bg-gray-800/50 border border-gray-700" : "bg-white/80 border border-gray-300"
-                          } group-hover/achievement:border-opacity-30 transition-all duration-300`}>
-                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${achievement.color} flex items-center justify-center text-white flex-shrink-0 mr-5 shadow-lg`}>
-                              {achievement.icon}
-                            </div>
-                            <div>
-                              <h5 className={`font-bold text-lg mb-1 ${
-                                isDarkMode ? "text-white" : "text-gray-900"
-                              }`}>{achievement.title}</h5>
-                              <p className={`text-sm ${mutedText} mb-2`}>{achievement.description}</p>
-                              <p className={`text-xs ${
-                                isDarkMode ? "text-cyan-400" : "text-cyan-600"
-                              } font-medium`}>{achievement.year}</p>
-                            </div>
-                          </div>
-                        </motion.div>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                          <span className={mutedText}>{feature}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </CardContent>
                 </Card>
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={aboutInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
-            >
-              <h3 className={`text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400`}>
-                Technical Arsenal
-              </h3>
-              
-              {skills.map((skillSet, index) => (
-                <motion.div
-                  key={skillSet.category}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={aboutInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.4 + index * 0.15 }}
-                  className="relative group"
-                >
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${skillSet.color} rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500`}></div>
-                  <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden`}>
-                    <div className={`h-1 bg-gradient-to-r ${skillSet.color}`} />
-                    <CardHeader className="pb-4">
-                      <CardTitle className={`text-xl flex items-center ${
-                        isDarkMode ? "text-white" : "text-gray-900"
-                      }`}>
-                        {skillSet.icon}
-                        <span className="ml-3">{skillSet.category}</span>
-                        <div className="ml-auto flex items-center space-x-2">
-                          <span className={`text-sm ${
-                            isDarkMode ? "text-gray-400" : "text-gray-600"
-                          }`}>{skillSet.level}%</span>
-                          <div className={`w-20 h-2 ${
-                            isDarkMode ? "bg-gray-700" : "bg-gray-300"
-                          } rounded-full`}>
-                            <div 
-                              className={`h-full rounded-full bg-gradient-to-r ${skillSet.color}`}
-                              style={{ width: `${skillSet.level}%` }}
-                            ></div>
-                          </div>
-                        </div>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-3">
-                        {skillSet.items.map((skill, skillIndex) => (
-                          <motion.div
-                            key={skillIndex}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={aboutInView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: 0.6 + skillIndex * 0.05 }}
-                            whileHover={{ scale: 1.1, y: -2 }}
-                            className="relative group/skill"
-                          >
-                            <div className={`absolute -inset-0.5 bg-gradient-to-r ${skillSet.color} rounded-lg blur opacity-0 group-hover/skill:opacity-75 transition duration-300`}></div>
-                            <Badge 
-                              className={`relative px-4 py-2 text-sm ${
-                                isDarkMode 
-                                  ? "bg-gray-700/50 border border-gray-600 text-gray-300 hover:bg-gray-600/50" 
-                                  : "bg-gray-200/80 border border-gray-300 text-gray-700 hover:bg-gray-300/80"
-                              } border transition-colors backdrop-blur-sm`}
-                            >
-                              {skill}
-                            </Badge>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" ref={projectsRef} className={`py-32 relative ${sectionBg}`}>
+      <section id="projects" ref={projectsRef} className={`py-24 ${sectionBg}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={projectsInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <div className="relative inline-block mb-6">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur opacity-75"></div>
-              <Badge className="relative bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-0 px-8 py-4 text-base font-semibold">
-                <Binary className="w-5 h-5 mr-2" />
-                Portfolio Showcase
-              </Badge>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Featured Projects
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                Enterprise Projects
               </span>
             </h2>
-            <p className={`text-xl ${mutedText} max-w-3xl mx-auto`}>
-              Innovation meets execution in every line of code
+            <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
+              Production-ready solutions built with scalability, security, and performance in mind
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={projectsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="relative group"
               >
-                <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500`}></div>
-                <Card
-                  className={`relative h-full ${
-                    isDarkMode 
-                      ? "bg-gray-800 border border-gray-700" 
-                      : "bg-white border border-gray-300"
-                  } backdrop-blur-xl overflow-hidden transition-all duration-500`}
-                >
+                <Card className={`h-full ${cardBg} border ${cardBorder} backdrop-blur-sm overflow-hidden transition-all duration-300 group-hover:shadow-xl`}>
                   <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
                   
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0 px-4 py-2 font-semibold`}>
-                          {project.category}
-                        </Badge>
-                        <Badge variant="outline" className={`${
-                          isDarkMode 
-                            ? "border-cyan-500/50 text-cyan-400" 
-                            : "border-cyan-600/50 text-cyan-600"
-                        }`}>
-                          {project.status}
-                        </Badge>
-                      </div>
-                      <motion.div 
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg`}
-                      >
-                        {project.icon}
-                      </motion.div>
+                      <Badge className={`bg-gradient-to-r ${project.gradient} text-white border-0`}>
+                        {project.category}
+                      </Badge>
+                      <Badge variant="outline" className={
+                        project.status === "Production" ? "border-green-500 text-green-400" :
+                        project.status === "In Development" ? "border-yellow-500 text-yellow-400" :
+                        "border-blue-500 text-blue-400"
+                      }>
+                        {project.status}
+                      </Badge>
                     </div>
                     
-                    <CardTitle className={`text-2xl ${
-                      isDarkMode ? "text-blue-400" : "text-blue-600"
-                    } group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300`}>
+                    <CardTitle className={`text-xl ${
+                      isDarkMode ? "text-white" : "text-gray-900"
+                    } mb-3`}>
                       {project.title}
                     </CardTitle>
-                    <CardDescription className={`leading-relaxed mt-3 text-base ${mutedText}`}>
+                    <CardDescription className={`leading-relaxed ${mutedText}`}>
                       {project.description}
                     </CardDescription>
                   </CardHeader>
                   
                   <CardContent className="pb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <motion.div
-                          key={techIndex}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={projectsInView ? { opacity: 1, scale: 1 } : {}}
-                          transition={{ delay: 0.8 + techIndex * 0.05 }}
-                          whileHover={{ scale: 1.1 }}
-                        >
-                          <Badge className={`text-xs ${
-                            isDarkMode 
-                              ? "bg-gray-700/50 border border-gray-600 text-gray-300 hover:bg-gray-600/50" 
-                              : "bg-gray-200/80 border border-gray-300 text-gray-700 hover:bg-gray-300/80"
-                          } border transition-colors backdrop-blur-sm`}>
+                    <div className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, techIndex) => (
+                          <Badge key={techIndex} variant="secondary" className="text-xs">
                             {tech}
                           </Badge>
-                        </motion.div>
-                      ))}
+                        ))}
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <h4 className={`text-sm font-semibold ${
+                          isDarkMode ? "text-gray-300" : "text-gray-700"
+                        }`}>Key Features</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {project.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center text-xs">
+                              <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                              <span className={mutedText}>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                   
-                  <CardFooter className={`flex gap-4 border-t ${
-                    isDarkMode ? "border-gray-700" : "border-gray-300"
-                  } pt-6`}>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-                      <Button
-                        variant="outline"
-                        className={`w-full border-2 ${
-                          isDarkMode 
-                            ? "border-gray-600 hover:border-gray-500 bg-transparent hover:bg-gray-700/50 text-gray-400 hover:text-white" 
-                            : "border-gray-400 hover:border-gray-500 bg-transparent hover:bg-gray-200/50 text-gray-600 hover:text-gray-900"
-                        } transition-all duration-300 rounded-xl`}
-                        onClick={() => window.open(project.github, '_blank')}
-                        disabled={project.github === '#'}
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-                      <Button
-                        className={`w-full bg-gradient-to-r ${project.gradient} hover:shadow-xl border-0 transition-all duration-300 rounded-xl`}
-                        onClick={() => window.open(project.live, '_blank')}
-                        disabled={project.live === '#'}
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Button>
-                    </motion.div>
+                  <CardFooter className={`flex gap-3 border-t ${
+                    isDarkMode ? "border-gray-800" : "border-gray-200"
+                  } pt-4`}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => window.open(project.github, '_blank')}
+                      disabled={project.github === '#'}
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code
+                    </Button>
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600"
+                      onClick={() => window.open(project.live, '_blank')}
+                      disabled={project.live === '#'}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
+                    </Button>
                   </CardFooter>
                 </Card>
               </motion.div>
@@ -1042,241 +815,191 @@ const App = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" ref={experienceRef} className={`py-32 relative ${sectionBg}`}>
+      <section id="experience" ref={experienceRef} className={`py-24 ${sectionBg}`}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={experienceInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <div className="relative inline-block mb-6">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-75"></div>
-              <Badge className="relative bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 px-8 py-4 text-base font-semibold">
-                <Workflow className="w-5 h-5 mr-2" />
-                Career Journey
-              </Badge>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Professional Path
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                Professional Journey
               </span>
             </h2>
-            <p className={`text-xl ${mutedText} max-w-3xl mx-auto`}>
-              From passion to profession - building the future one line at a time
+            <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
+              From concept to production - building enterprise solutions with modern technology stacks
             </p>
           </motion.div>
 
-          <div className="relative">
-            {/* Enhanced Timeline */}
-            <div className="absolute left-16 top-0 bottom-0 flex flex-col items-center">
-              <motion.div
-                initial={{ scaleY: 0 }}
-                animate={experienceInView ? { scaleY: 1 } : {}}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                className="w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500 rounded-full origin-top shadow-2xl"
-                style={{ height: 'calc(100% - 4rem)' }}
-              />
-              
-              {experiences.map((_, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={experienceInView ? { scale: 1, opacity: 1 } : {}}
-                  transition={{ delay: 0.5 + index * 0.3 }}
-                  className={`absolute w-8 h-8 rounded-full border-4 ${
-                    isDarkMode ? "border-gray-900" : "border-white"
-                  } bg-gradient-to-r from-blue-500 to-purple-500 z-10 shadow-2xl`}
-                  style={{ 
-                    top: `${(index * 100) + 12}%`,
-                    transform: 'translateY(-50%)'
-                  }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-white mx-auto mt-1.5"></div>
-                </motion.div>
-              ))}
-            </div>
-
+          <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 animate={experienceInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="flex gap-8 mb-16 last:mb-0 relative group"
+                className="flex gap-6 group"
               >
-                {/* Timeline Icon */}
-                <motion.div 
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="relative z-20 flex-shrink-0"
-                >
-                  <div className={`absolute -inset-3 bg-gradient-to-r ${exp.color} rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-500`}></div>
-                  <div className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${exp.color} flex items-center justify-center text-white border-4 ${
-                    isDarkMode ? "border-gray-900" : "border-white"
-                  } shadow-2xl`}>
+                <div className="flex-shrink-0">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${exp.color} flex items-center justify-center text-white shadow-lg`}>
                     {exp.icon}
                   </div>
-                  
-                  {/* Year Indicator */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={experienceInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.8 + index * 0.2 }}
-                    className={`absolute -top-2 -right-2 px-3 py-1 rounded-full text-xs font-semibold ${
-                      isDarkMode ? "bg-gray-800 text-cyan-400 border border-cyan-500/30" : "bg-white text-cyan-600 border border-cyan-600/30"
-                    }`}
-                  >
-                    {exp.period.split(' - ')[0]}
-                  </motion.div>
-                </motion.div>
+                </div>
                 
-                {/* Content Card */}
-                <motion.div 
-                  whileHover={{ scale: 1.02, x: 5 }}
-                  className="flex-1 relative group"
-                >
-                  <div className={`absolute -inset-4 bg-gradient-to-r ${exp.color} rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500`}></div>
-                  
-                  <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden transition-all duration-300 group-hover:shadow-2xl group-hover:${
-                    isDarkMode ? "border-gray-600" : "border-gray-400"
-                  }`}>
-                    {/* Accent Bar */}
-                    <div className={`h-1 bg-gradient-to-r ${exp.color} transition-all duration-500 group-hover:h-2`} />
-                    
-                    <CardHeader className="pb-4">
-                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-4">
-                        <div className="space-y-3">
-                          <CardTitle className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                <div className="flex-1">
+                  <Card className={`${cardBg} border ${cardBorder} backdrop-blur-sm overflow-hidden`}>
+                    <div className={`h-1 bg-gradient-to-r ${exp.color}`} />
+                    <CardHeader>
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                        <div>
+                          <CardTitle className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                             {exp.role}
                           </CardTitle>
-                          <CardDescription className={`text-lg font-semibold ${
+                          <CardDescription className={`text-base font-semibold ${
                             isDarkMode ? "text-cyan-400" : "text-cyan-600"
                           }`}>
                             {exp.company}
                           </CardDescription>
                         </div>
-                        <Badge className={`self-start flex items-center gap-2 px-4 py-2 ${
-                          isDarkMode 
-                            ? "bg-gray-700/50 border border-gray-600 text-gray-300" 
-                            : "bg-gray-200/80 border border-gray-300 text-gray-700"
-                        }`}>
-                          <Calendar className="w-4 h-4" />
+                        <Badge variant="outline" className="self-start">
+                          <Calendar className="w-3 h-3 mr-2" />
                           {exp.period}
                         </Badge>
                       </div>
                     </CardHeader>
                     
-                    <CardContent className="space-y-6">
-                      <p className={`leading-relaxed text-lg ${mutedText} border-l-4 ${
-                        isDarkMode ? "border-cyan-500/50" : "border-cyan-600/50"
-                      } pl-4 italic`}>
+                    <CardContent className="space-y-4">
+                      <p className={`leading-relaxed ${mutedText}`}>
                         {exp.description}
                       </p>
-                      
-                      {/* Achievements */}
-                      {exp.achievements && (
-                        <div className="space-y-3">
-                          <h4 className={`font-semibold text-sm uppercase tracking-wide ${
-                            isDarkMode ? "text-cyan-400" : "text-cyan-600"
-                          }`}>
-                            Key Achievements
-                          </h4>
-                          <ul className="space-y-2">
-                            {exp.achievements.map((achievement, idx) => (
-                              <motion.li
-                                key={idx}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={experienceInView ? { opacity: 1, x: 0 } : {}}
-                                transition={{ delay: 1 + idx * 0.1 }}
-                                className={`flex items-center ${mutedText}`}
-                              >
-                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3"></div>
-                                {achievement}
-                              </motion.li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
                       
                       <div className="space-y-3">
                         <h4 className={`font-semibold text-sm uppercase tracking-wide ${
                           isDarkMode ? "text-cyan-400" : "text-cyan-600"
                         }`}>
-                          Technologies & Skills
+                          Key Achievements
+                        </h4>
+                        <ul className="space-y-2">
+                          {exp.achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-center text-sm">
+                              <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3"></div>
+                              <span className={mutedText}>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <h4 className={`font-semibold text-sm uppercase tracking-wide ${
+                          isDarkMode ? "text-cyan-400" : "text-cyan-600"
+                        }`}>
+                          Technologies
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.tech.map((tech, techIndex) => (
-                            <motion.div
-                              key={techIndex}
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={experienceInView ? { opacity: 1, scale: 1 } : {}}
-                              transition={{ delay: 1 + techIndex * 0.1 }}
-                              whileHover={{ scale: 1.05, y: -2 }}
-                            >
-                              <Badge className={`text-sm ${
-                                isDarkMode 
-                                  ? "bg-blue-900/30 border border-blue-500/30 text-blue-300" 
-                                  : "bg-blue-100 border border-blue-500/30 text-blue-700"
-                              } px-3 py-1.5 transition-colors hover:border-opacity-50`}>
-                                {tech}
-                              </Badge>
-                            </motion.div>
+                            <Badge key={techIndex} variant="secondary" className="text-xs">
+                              {tech}
+                            </Badge>
                           ))}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Floating elements for visual interest */}
+      {/* Skills Section */}
+      <section className={`py-24 ${sectionBg}`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={experienceInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 1.5 }}
-            className="text-center mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-full ${
-              isDarkMode 
-                ? "bg-gray-800/50 backdrop-blur-sm border border-cyan-500/30" 
-                : "bg-white/80 backdrop-blur-sm border border-cyan-600/30"
-            }`}>
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span className={`text-sm ${
-                isDarkMode ? "text-cyan-400" : "text-cyan-600"
-              }`}>
-                Always learning, always building
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Technical Expertise
               </span>
-            </div>
+            </h2>
+            <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
+              Mastery of modern technologies and development practices
+            </p>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {skills.map((skillSet, index) => (
+              <motion.div
+                key={skillSet.category}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="relative group"
+              >
+                <Card className={`${cardBg} border ${cardBorder} backdrop-blur-sm overflow-hidden`}>
+                  <div className={`h-1 bg-gradient-to-r ${skillSet.color}`} />
+                  <CardHeader className="pb-4">
+                    <CardTitle className={`text-lg flex items-center ${
+                      isDarkMode ? "text-white" : "text-gray-900"
+                    }`}>
+                      {skillSet.icon}
+                      <span className="ml-3">{skillSet.category}</span>
+                      <div className="ml-auto flex items-center space-x-2">
+                        <span className={`text-sm ${mutedText}`}>{skillSet.level}%</span>
+                        <div className={`w-16 h-2 ${
+                          isDarkMode ? "bg-gray-700" : "bg-gray-300"
+                        } rounded-full`}>
+                          <div 
+                            className={`h-full rounded-full bg-gradient-to-r ${skillSet.color}`}
+                            style={{ width: `${skillSet.level}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {skillSet.items.map((skill, skillIndex) => (
+                        <Badge 
+                          key={skillIndex}
+                          variant="secondary"
+                          className="text-sm"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" ref={contactRef} className={`py-32 relative ${sectionBg}`}>
+      <section id="contact" ref={contactRef} className={`py-24 ${sectionBg}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={contactInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <div className="relative inline-block mb-6">
-              <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full blur opacity-75"></div>
-              <Badge className="relative bg-gradient-to-r from-orange-500 to-pink-500 text-white border-0 px-8 py-4 text-base font-semibold">
-                <Network className="w-5 h-5 mr-2" />
-                Let's Connect
-              </Badge>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-600">
                 Start Your Project
               </span>
             </h2>
-            <p className={`text-xl ${mutedText} max-w-3xl mx-auto`}>
-              Ready to bring your vision to life? Let's create something extraordinary together
+            <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
+              Ready to build something extraordinary? Let's discuss your enterprise solution.
             </p>
           </motion.div>
 
@@ -1285,13 +1008,11 @@ const App = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={contactInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="relative group"
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-              <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden`}>
-                <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-500" />
+              <Card className={`${cardBg} border ${cardBorder} backdrop-blur-sm`}>
+                <div className="h-1 bg-gradient-to-r from-blue-600 to-indigo-600" />
                 <CardHeader>
-                  <CardTitle className={`text-3xl ${
+                  <CardTitle className={`text-2xl ${
                     isDarkMode ? "text-white" : "text-gray-900"
                   }`}>Send a Message</CardTitle>
                   <CardDescription className={`text-base ${mutedText}`}>
@@ -1300,7 +1021,7 @@ const App = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="space-y-3">
-                    <label htmlFor="name" className={`text-sm font-semibold flex items-center ${
+                    <label htmlFor="name" className={`text-sm font-semibold ${
                       isDarkMode ? "text-white" : "text-gray-900"
                     }`}>
                       Full Name
@@ -1308,13 +1029,13 @@ const App = () => {
                     <Input 
                       id="name" 
                       placeholder="John Doe" 
-                      className={`border-2 ${
-                        isDarkMode ? "border-gray-600 focus:border-cyan-500 bg-gray-700/50" : "border-gray-300 focus:border-cyan-500 bg-gray-50"
-                      } text-white placeholder:text-gray-500 transition-all duration-300 h-14 text-base rounded-xl`}
+                      className={`border ${
+                        isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
+                      } transition-all duration-300 h-12 rounded-xl`}
                     />
                   </div>
                   <div className="space-y-3">
-                    <label htmlFor="email" className={`text-sm font-semibold flex items-center ${
+                    <label htmlFor="email" className={`text-sm font-semibold ${
                       isDarkMode ? "text-white" : "text-gray-900"
                     }`}>
                       Email Address
@@ -1323,13 +1044,13 @@ const App = () => {
                       id="email" 
                       type="email" 
                       placeholder="john@example.com" 
-                      className={`border-2 ${
-                        isDarkMode ? "border-gray-600 focus:border-cyan-500 bg-gray-700/50" : "border-gray-300 focus:border-cyan-500 bg-gray-50"
-                      } text-white placeholder:text-gray-500 transition-all duration-300 h-14 text-base rounded-xl`}
+                      className={`border ${
+                        isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
+                      } transition-all duration-300 h-12 rounded-xl`}
                     />
                   </div>
                   <div className="space-y-3">
-                    <label htmlFor="message" className={`text-sm font-semibold flex items-center ${
+                    <label htmlFor="message" className={`text-sm font-semibold ${
                       isDarkMode ? "text-white" : "text-gray-900"
                     }`}>
                       Your Message
@@ -1337,18 +1058,16 @@ const App = () => {
                     <Textarea 
                       id="message" 
                       placeholder="Tell me about your project or idea..." 
-                      rows={7}
-                      className={`border-2 ${
-                        isDarkMode ? "border-gray-600 focus:border-cyan-500 bg-gray-700/50" : "border-gray-300 focus:border-cyan-500 bg-gray-50"
-                      } text-white placeholder:text-gray-500 transition-all duration-300 resize-none text-base rounded-xl`}
+                      rows={6}
+                      className={`border ${
+                        isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
+                      } transition-all duration-300 resize-none rounded-xl`}
                     />
                   </div>
-                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                    <Button className="w-full h-14 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 border-0 text-base font-semibold rounded-xl shadow-2xl">
-                      Send Message
-                      <Mail className="w-5 h-5 ml-2" />
-                    </Button>
-                  </motion.div>
+                  <Button className="w-full h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 border-0 font-semibold rounded-xl">
+                    Send Message
+                    <Mail className="w-4 h-4 ml-2" />
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>
@@ -1359,136 +1078,103 @@ const App = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <Card className={`relative ${cardBg} border ${cardBorder} backdrop-blur-xl overflow-hidden`}>
-                  <div className="h-2 bg-gradient-to-r from-purple-500 to-pink-500" />
-                  <CardHeader>
-                    <CardTitle className={`text-3xl ${
-                      isDarkMode ? "text-white" : "text-gray-900"
-                    }`}>Contact Info</CardTitle>
-                    <CardDescription className={`text-base ${mutedText}`}>Reach out through any channel</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-5">
-                    <motion.div 
-                      whileHover={{ scale: 1.03, x: 5 }}
-                      className="relative group/contact"
-                    >
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-0 group-hover/contact:opacity-50 transition duration-300"></div>
-                      <div className={`relative flex items-center gap-5 p-6 rounded-2xl ${
-                        isDarkMode 
-                          ? "bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border border-blue-500/20" 
-                          : "bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-500/30"
-                      }`}>
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white flex-shrink-0 shadow-lg">
-                          <Mail className="w-8 h-8" />
-                        </div>
-                        <div>
-                          <p className={`font-bold text-lg mb-1 ${
-                            isDarkMode ? "text-white" : "text-gray-900"
-                          }`}>Email</p>
-                          <p className={`text-sm ${mutedText}`}>matthew.balinton@example.com</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                    
-                    <motion.div 
-                      whileHover={{ scale: 1.03, x: 5 }}
-                      className="relative group/contact"
-                    >
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover/contact:opacity-50 transition duration-300"></div>
-                      <div className={`relative flex items-center gap-5 p-6 rounded-2xl ${
-                        isDarkMode 
-                          ? "bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/20" 
-                          : "bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-500/30"
-                      }`}>
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white flex-shrink-0 shadow-lg">
-                          <MapPin className="w-8 h-8" />
-                        </div>
-                        <div>
-                          <p className={`font-bold text-lg mb-1 ${
-                            isDarkMode ? "text-white" : "text-gray-900"
-                          }`}>Location</p>
-                          <p className={`text-sm ${mutedText}`}>Philippines</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-gray-800 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <Card className={`relative ${
-                  isDarkMode 
-                    ? "bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700" 
-                    : "bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300"
-                } backdrop-blur-xl overflow-hidden`}>
-                  <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-800" />
-                  <CardHeader>
-                    <CardTitle className={`text-3xl ${
-                      isDarkMode ? "text-white" : "text-gray-900"
-                    }`}>Social Links</CardTitle>
-                    <CardDescription className={`text-base ${mutedText}`}>Connect on your preferred platform</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid gap-4">
-                      {[
-                        { 
-                          icon: Github, 
-                          href: "https://github.com/abfasb", 
-                          label: "GitHub",
-                          gradient: "from-gray-600 to-gray-800",
-                          description: "View my repositories"
-                        },
-                        { 
-                          icon: Linkedin, 
-                          href: "https://www.linkedin.com/in/matthew-balinton-9478a7255/", 
-                          label: "LinkedIn",
-                          gradient: "from-blue-600 to-blue-800",
-                          description: "Professional network"
-                        },
-                        { 
-                          icon: Mail, 
-                          href: "mailto:matthew.balinton@example.com", 
-                          label: "Email",
-                          gradient: "from-red-500 to-pink-600",
-                          description: "Direct contact"
-                        }
-                      ].map((social, idx) => (
-                        <motion.div
-                          key={social.label}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={contactInView ? { opacity: 1, y: 0 } : {}}
-                          transition={{ delay: 0.4 + idx * 0.1 }}
-                          whileHover={{ scale: 1.03, x: 8 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <Button
-                            className={`w-full h-16 justify-between bg-gradient-to-r ${social.gradient} text-white border-0 transition-all duration-300 group/btn rounded-xl shadow-lg`}
-                            onClick={() => window.open(social.href, '_blank')}
-                          >
-                            <div className="flex items-center gap-4">
-                              <social.icon className="w-6 h-6" />
-                              <div className="text-left">
-                                <span className="font-semibold block text-base">{social.label}</span>
-                                <span className="text-xs text-white/70">{social.description}</span>
-                              </div>
-                            </div>
-                            <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                          </Button>
-                        </motion.div>
-                      ))}
+              <Card className={`${cardBg} border ${cardBorder} backdrop-blur-sm`}>
+                <div className="h-1 bg-gradient-to-r from-indigo-600 to-purple-600" />
+                <CardHeader>
+                  <CardTitle className={`text-2xl ${
+                    isDarkMode ? "text-white" : "text-gray-900"
+                  }`}>Contact Information</CardTitle>
+                  <CardDescription className={`text-base ${mutedText}`}>
+                    Reach out through any channel
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-5">
+                  <div className="flex items-center gap-5 p-4 rounded-xl border border-blue-500/20 bg-blue-500/10">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white">
+                      <Mail className="w-5 h-5" />
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                    <div>
+                      <p className={`font-bold text-lg mb-1 ${
+                        isDarkMode ? "text-white" : "text-gray-900"
+                      }`}>Email</p>
+                      <p className={`text-sm ${mutedText}`}>matthew.balinton@example.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-5 p-4 rounded-xl border border-purple-500/20 bg-purple-500/10">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className={`font-bold text-lg mb-1 ${
+                        isDarkMode ? "text-white" : "text-gray-900"
+                      }`}>Location</p>
+                      <p className={`text-sm ${mutedText}`}>Philippines</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className={`${
+                isDarkMode 
+                  ? "bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700" 
+                  : "bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-300"
+              } backdrop-blur-sm`}>
+                <div className="h-1 bg-gradient-to-r from-gray-600 to-gray-800" />
+                <CardHeader>
+                  <CardTitle className={`text-2xl ${
+                    isDarkMode ? "text-white" : "text-gray-900"
+                  }`}>Connect With Me</CardTitle>
+                  <CardDescription className={`text-base ${mutedText}`}>
+                    Professional networks and platforms
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-4">
+                    {[
+                      { 
+                        icon: Github, 
+                        href: "https://github.com/abfasb", 
+                        label: "GitHub",
+                        description: "View my repositories"
+                      },
+                      { 
+                        icon: Linkedin, 
+                        href: "https://www.linkedin.com/in/matthew-balinton-9478a7255/", 
+                        label: "LinkedIn",
+                        description: "Professional network"
+                      },
+                      { 
+                        icon: Mail, 
+                        href: "mailto:matthew.balinton@example.com", 
+                        label: "Email",
+                        description: "Direct contact"
+                      }
+                    ].map((social, idx) => (
+                      <Button
+                        key={social.label}
+                        variant="outline"
+                        className={`w-full h-14 justify-start border ${
+                          isDarkMode ? "border-gray-700 hover:border-blue-500" : "border-gray-300 hover:border-blue-500"
+                        } transition-all duration-300 rounded-xl`}
+                        onClick={() => window.open(social.href, '_blank')}
+                      >
+                        <social.icon className="w-5 h-5 mr-4" />
+                        <div className="text-left">
+                          <span className="font-semibold block">{social.label}</span>
+                          <span className="text-xs text-gray-500">{social.description}</span>
+                        </div>
+                      </Button>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <footer className={`relative py-20 border-t ${
+      <footer className={`relative py-16 border-t ${
         isDarkMode ? "border-gray-800" : "border-gray-300"
       }`}>
         <div className={`absolute inset-0 bg-gradient-to-b from-transparent ${
@@ -1496,95 +1182,73 @@ const App = () => {
         }`}></div>
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-10 md:mb-0 text-center md:text-left"
-            >
-              <div className="relative inline-block mb-4">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg blur opacity-50"></div>
-                <h3 className="relative text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
-                  Matthew Balinton
-                </h3>
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div className="mb-8 md:mb-0 text-center md:text-left">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white`}>
+                  <Code className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    Matthew Balinton
+                  </div>
+                  <div className={`text-sm ${mutedText}`}>Enterprise Full Stack Developer</div>
+                </div>
               </div>
-              <p className={`text-lg font-medium ${
-                isDarkMode ? "text-cyan-400" : "text-cyan-600"
-              }`}>Full Stack Developer & AI Innovator</p>
               <p className={`text-sm ${
                 isDarkMode ? "text-gray-500" : "text-gray-600"
-              } mt-3 italic`}>Crafting tomorrow's digital experiences today</p>
-            </motion.div>
+              } italic`}>Building the future of enterprise software</p>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex gap-5"
-            >
+            <div className="flex gap-4">
               {[
-                { icon: Github, href: "https://github.com/abfasb", gradient: "from-gray-600 to-gray-800" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/matthew-balinton-9478a7255/", gradient: "from-blue-500 to-blue-700" },
-                { icon: Mail, href: "mailto:matthew.balinton@example.com", gradient: "from-red-500 to-pink-600" }
+                { icon: Github, href: "https://github.com/abfasb" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/matthew-balinton-9478a7255/" },
+                { icon: Mail, href: "mailto:matthew.balinton@example.com" }
               ].map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, y: -5, rotate: 5 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="relative group"
+                  className={`w-10 h-10 rounded-xl border ${
+                    isDarkMode ? "border-gray-700 bg-gray-800" : "border-gray-300 bg-white"
+                  } flex items-center justify-center ${
+                    isDarkMode ? "text-gray-400" : "text-gray-600"
+                  } hover:text-blue-600 transition-colors`}
                 >
-                  <div className={`absolute -inset-1 bg-gradient-to-r ${social.gradient} rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-300`}></div>
-                  <div className={`relative w-16 h-16 rounded-2xl ${
-                    isDarkMode ? "bg-gray-800 border border-gray-700" : "bg-white border border-gray-300"
-                  } group-hover:border-opacity-40 flex items-center justify-center ${
-                    isDarkMode ? "text-cyan-400" : "text-cyan-600"
-                  } group-hover:text-white transition-all duration-300 backdrop-blur-sm`}>
-                    <social.icon className="w-7 h-7" />
-                  </div>
+                  <social.icon className="w-4 h-4" />
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
           </div>
           
           <div className={`border-t ${
             isDarkMode ? "border-gray-800" : "border-gray-300"
-          } pt-10 text-center`}>
-            <p className={`text-base ${mutedText}`}>
-              &copy; {new Date().getFullYear()} Matthew Balinton. Engineered with 
-              <motion.span 
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-                className="inline-block mx-2 text-red-400"
-              >
-                ♥
-              </motion.span> 
-              and 
-              <span className="text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text font-semibold"> cutting-edge technology</span>
+          } pt-8 text-center`}>
+            <p className={`text-sm ${mutedText}`}>
+              &copy; {new Date().getFullYear()} Matthew Balinton. Crafted with precision for enterprise excellence.
             </p>
           </div>
         </div>
       </footer>
 
-      {/* Enhanced Scroll to top button */}
+      {/* Scroll to top button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ 
           opacity: scrolled ? 1 : 0,
           scale: scrolled ? 1 : 0
         }}
-        whileHover={{ scale: 1.2, rotate: 10 }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-10 right-10 z-40 group"
+        className="fixed bottom-8 right-8 z-40"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-        <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white flex items-center justify-center border-2 border-white/20 shadow-2xl">
-          <ArrowUp className="w-7 h-7" />
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white flex items-center justify-center border-2 border-white/20 shadow-lg">
+          <ArrowUp className="w-5 h-5" />
         </div>
       </motion.button>
     </div>
