@@ -134,17 +134,14 @@ const App = () => {
   const inputBg = isDarkMode ? "bg-gray-900" : "bg-gray-50";
   const hoverBg = isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100";
   
-  // Section-specific backgrounds
   const sectionBg = isDarkMode ? "bg-gray-950" : "bg-gray-50";
   const cardBorder = isDarkMode ? "border-gray-800" : "border-gray-200";
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-600";
   const accentText = isDarkMode ? "text-gray-300" : "text-gray-700";
 
-  // Fixed navigation text colors for light mode
   const navTextColor = isDarkMode ? "text-gray-100" : "text-gray-900";
   const navHoverColor = isDarkMode ? "hover:text-white" : "hover:text-blue-600";
 
-  // Professional Navigation Data
   const navSections = [
     { id: 'home', label: 'Home', icon: <Cpu className="w-4 h-4" />, gradient: 'from-blue-600 to-cyan-600' },
     { id: 'about', label: 'About', icon: <User className="w-4 h-4" />, gradient: 'from-blue-600 to-indigo-600' },
@@ -207,24 +204,24 @@ const App = () => {
   const experiences = [
     {
       role: "Full Stack Developer",
-      company: "Enterprise Solutions & Consulting",
-      period: "2023 - Present",
+      company: "Freelance",
+      period: "2024 - Present",
       description: "Architecting and developing full-stack applications with modern tech stacks. Specializing in React, TypeScript, Node.js ecosystems, and seamless AI/ML integration for scalable, production-ready solutions.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       icon: <Code2 className="w-5 h-5" />,
       color: "from-blue-600 to-cyan-700",
-      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects", "100% client satisfaction rate"],
+      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects",],
       type: "Professional"
     },
     {
-      role: "BSIT Student - Software Architecture",
+      role: "BSIT Student",
       company: "Information Technology",
       period: "2022 - 2026",
       description: "Pursuing Bachelor of Science in Information Technology with intensive focus on advanced software architecture, AI/ML integration, cloud computing, and web technologies.",
       tech: ["Software Architecture", "Cloud Computing", "AI/ML Research"],
       icon: <GraduationCap className="w-5 h-5" />,
       color: "from-indigo-600 to-purple-700",
-      achievements: ["Maintained 3.8+ GPA", "Published research papers", "Led technical teams"],
+      achievements: ["Maintained Good GPA", "Led technical teams"],
       type: "Education"
     }
   ];
@@ -233,7 +230,6 @@ const App = () => {
     { label: "Projects Delivered", value: "15+", icon: <Target className="w-4 h-4" />, color: "from-blue-600 to-cyan-700", suffix: "Solutions" },
     { label: "Technologies", value: "20+", icon: <Zap className="w-4 h-4" />, color: "from-indigo-600 to-purple-700", suffix: "Modern Stack" },
     { label: "Experience", value: "3", icon: <TrendingUp className="w-4 h-4" />, color: "from-emerald-600 to-teal-700", suffix: "Years" },
-    { label: "Clients", value: "10+", icon: <Users className="w-4 h-4" />, color: "from-orange-600 to-red-700", suffix: "Satisfied" }
   ];
 
   const skills = [
