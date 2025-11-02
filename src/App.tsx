@@ -49,15 +49,19 @@ import {
   BarChart3,
   Smartphone,
   Monitor,
-  CloudLightning
+  CloudLightning,
+  User,
+  Heart,
+  Coffee
 } from 'lucide-react';
+
 
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isNavOpen, setIsNavOpen] = useState(false);
-  
+
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -136,10 +140,14 @@ const App = () => {
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-600";
   const accentText = isDarkMode ? "text-gray-300" : "text-gray-700";
 
+  // Fixed navigation text colors for light mode
+  const navTextColor = isDarkMode ? "text-gray-100" : "text-gray-900";
+  const navHoverColor = isDarkMode ? "hover:text-white" : "hover:text-blue-600";
+
   // Professional Navigation Data
   const navSections = [
     { id: 'home', label: 'Home', icon: <Cpu className="w-4 h-4" />, gradient: 'from-blue-600 to-cyan-600' },
-    { id: 'about', label: 'About', icon: <FileCode className="w-4 h-4" />, gradient: 'from-blue-600 to-indigo-600' },
+    { id: 'about', label: 'About', icon: <User className="w-4 h-4" />, gradient: 'from-blue-600 to-indigo-600' },
     { id: 'projects', label: 'Projects', icon: <Layers className="w-4 h-4" />, gradient: 'from-indigo-600 to-purple-600' },
     { id: 'experience', label: 'Experience', icon: <Workflow className="w-4 h-4" />, gradient: 'from-purple-600 to-pink-600' },
     { id: 'contact', label: 'Contact', icon: <Network className="w-4 h-4" />, gradient: 'from-pink-600 to-rose-600' }
@@ -147,7 +155,7 @@ const App = () => {
 
   const projects = [
     {
-      title: "DILG Calapan City - Enterprise DMS",
+      title: "DILG Calapan City - Document Management System",
       description: "Government-grade document management system with AI-powered classification, intelligent search, and real-time analytics dashboard for streamlined municipal operations.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       github: "https://github.com/abfasb/dilg-calapan-capstone-backend",
@@ -167,7 +175,7 @@ const App = () => {
       category: "Healthcare Tech",
       gradient: "from-emerald-600 to-teal-700",
       icon: <Brain className="w-5 h-5" />,
-      status: "In Development",
+      status: "Completed",
       features: ["Computer Vision", "Inventory AI", "Safety Checks", "Patient Management"]
     },
     {
@@ -183,7 +191,7 @@ const App = () => {
       features: ["Predictive Analytics", "ML Optimization", "Auto Restocking", "Customer Insights"]
     },
     {
-      title: "Enterprise Learning System",
+      title: "Learning Management System",
       description: "Comprehensive educational platform with course management, real-time collaboration, and advanced student performance tracking.",
       tech: ["Laravel", "MySQL", "JavaScript", "Docker", "Redis", "WebSockets"],
       github: "https://github.com/abfasb/web2-system",
@@ -201,7 +209,7 @@ const App = () => {
       role: "Full Stack Developer",
       company: "Enterprise Solutions & Consulting",
       period: "2023 - Present",
-      description: "Architecting and developing enterprise-grade full-stack applications with modern tech stacks. Specializing in React, TypeScript, Node.js ecosystems, and seamless AI/ML integration for scalable, production-ready solutions.",
+      description: "Architecting and developing full-stack applications with modern tech stacks. Specializing in React, TypeScript, Node.js ecosystems, and seamless AI/ML integration for scalable, production-ready solutions.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       icon: <Code2 className="w-5 h-5" />,
       color: "from-blue-600 to-cyan-700",
@@ -212,7 +220,7 @@ const App = () => {
       role: "BSIT Student - Software Architecture",
       company: "Information Technology",
       period: "2022 - 2026",
-      description: "Pursuing Bachelor of Science in Information Technology with intensive focus on advanced software architecture, AI/ML integration, cloud computing, and enterprise web technologies.",
+      description: "Pursuing Bachelor of Science in Information Technology with intensive focus on advanced software architecture, AI/ML integration, cloud computing, and web technologies.",
       tech: ["Software Architecture", "Cloud Computing", "AI/ML Research"],
       icon: <GraduationCap className="w-5 h-5" />,
       color: "from-indigo-600 to-purple-700",
@@ -222,10 +230,10 @@ const App = () => {
   ];
 
   const stats = [
-    { label: "Projects Delivered", value: "15+", icon: <Target className="w-4 h-4" />, color: "from-blue-600 to-cyan-700", suffix: "Enterprise Solutions" },
+    { label: "Projects Delivered", value: "15+", icon: <Target className="w-4 h-4" />, color: "from-blue-600 to-cyan-700", suffix: "Solutions" },
     { label: "Technologies", value: "20+", icon: <Zap className="w-4 h-4" />, color: "from-indigo-600 to-purple-700", suffix: "Modern Stack" },
     { label: "Experience", value: "3", icon: <TrendingUp className="w-4 h-4" />, color: "from-emerald-600 to-teal-700", suffix: "Years" },
-    { label: "Enterprise Clients", value: "10+", icon: <Users className="w-4 h-4" />, color: "from-orange-600 to-red-700", suffix: "Satisfied" }
+    { label: "Clients", value: "10+", icon: <Users className="w-4 h-4" />, color: "from-orange-600 to-red-700", suffix: "Satisfied" }
   ];
 
   const skills = [
@@ -280,30 +288,6 @@ const App = () => {
       description: "Multiple-time recipient of computer science and technical excellence awards",
       icon: <Star className="w-4 h-4" />,
       color: "from-purple-600 to-pink-600"
-    }
-  ];
-
-  const services = [
-    {
-      title: "Enterprise Web Development",
-      description: "Scalable, maintainable web applications built with modern architecture patterns",
-      icon: <Code2 className="w-6 h-6" />,
-      color: "from-blue-600 to-cyan-600",
-      features: ["React/Next.js", "TypeScript", "Scalable Architecture", "Performance Optimization"]
-    },
-    {
-      title: "AI/ML Integration",
-      description: "Intelligent solutions with machine learning and artificial intelligence capabilities",
-      icon: <Brain className="w-6 h-6" />,
-      color: "from-indigo-600 to-purple-600",
-      features: ["Computer Vision", "Predictive Analytics", "Natural Language Processing", "Automation"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Robust cloud solutions with focus on scalability, security, and reliability",
-      icon: <CloudLightning className="w-6 h-6" />,
-      color: "from-emerald-600 to-teal-600",
-      features: ["AWS/Azure", "Docker/Kubernetes", "CI/CD Pipelines", "Monitoring & Logging"]
     }
   ];
 
@@ -368,20 +352,19 @@ const App = () => {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-4"
             >
-              <div className={`w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg`}>
-                <Code className="w-5 h-5" />
+              <div className={`w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg`}>
+                <img src='https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg' alt='Matt Logo' className="w-10 h-10 rounded-full" />
               </div>
               <div>
                 <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   Matthew Balinton
                 </div>
-                <div className={`text-xs ${mutedText}`}>Enterprise Developer</div>
+                <div className={`text-xs ${mutedText}`}>Full Stack Developer</div>
               </div>
             </motion.div>
 
@@ -393,10 +376,10 @@ const App = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`relative px-6 py-3 transition-all duration-300 ${
+                  className={`relative px-6 py-3 transition-all duration-300 ${navTextColor} ${
                     activeSection === item.id 
                       ? 'text-white' 
-                      : `${mutedText} hover:text-white`
+                      : `${navHoverColor}`
                   }`}
                   onClick={() => scrollToSection(item.id)}
                 >
@@ -502,7 +485,7 @@ const App = () => {
                     <span className={`font-medium ${
                       activeSection === item.id 
                         ? 'text-white' 
-                        : mutedText
+                        : navTextColor
                     }`}>{item.label}</span>
                   </motion.button>
                 ))}
@@ -528,7 +511,7 @@ const App = () => {
             >
               <div className="inline-flex items-center space-x-2 px-6 py-3 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-sm">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-blue-400 text-sm font-medium">Available for Enterprise Projects</span>
+                <span className="text-blue-400 text-sm font-medium">Available for Projects</span>
               </div>
             </motion.div>
 
@@ -554,7 +537,7 @@ const App = () => {
                 animate={heroInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.6 }}
               >
-                Enterprise Full Stack Developer
+                Full Stack Developer
               </motion.p>
               
               <motion.p 
@@ -563,8 +546,8 @@ const App = () => {
                 animate={heroInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.8 }}
               >
-                Building scalable, maintainable software solutions for forward-thinking enterprises. 
-                Specializing in modern web technologies, cloud architecture, and AI integration.
+                Building scalable, maintainable software solutions with modern web technologies, 
+                cloud architecture, and AI integration. Passionate about creating impactful digital experiences.
               </motion.p>
             </motion.div>
 
@@ -584,7 +567,7 @@ const App = () => {
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 text-base border-0 rounded-xl shadow-lg"
                   onClick={() => scrollToSection('projects')}
                 >
-                  View Enterprise Projects
+                  View Projects
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </motion.div>
@@ -642,63 +625,163 @@ const App = () => {
         </motion.div>
       </section>
 
-      {/* Services Section */}
-      <section className={`py-24 ${sectionBg}`}>
+      {/* About Section */}
+      <section id="about" ref={aboutRef} className={`py-24 ${sectionBg}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={aboutInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                Enterprise Services
+                About Me
               </span>
             </h2>
             <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
-              Comprehensive software development services tailored for enterprise needs
+              Passionate developer crafting digital solutions that make a difference
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="relative group"
-              >
-                <Card className={`h-full ${cardBg} border ${cardBorder} backdrop-blur-sm overflow-hidden transition-all duration-300 group-hover:shadow-xl`}>
-                  <div className={`h-2 bg-gradient-to-r ${service.color}`} />
-                  <CardHeader className="pb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-white mb-4 shadow-lg`}>
-                      {service.icon}
-                    </div>
-                    <CardTitle className={`text-xl ${
-                      isDarkMode ? "text-white" : "text-gray-900"
-                    }`}>
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className={`${mutedText} leading-relaxed`}>
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className={mutedText}>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={aboutInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <div>
+                <h3 className={`text-2xl font-bold mb-4 ${
+                  isDarkMode ? "text-white" : "text-gray-900"
+                }`}>
+                  Hello, I'm Matthew
+                </h3>
+                <div className={`space-y-4 ${mutedText} leading-relaxed`}>
+                  <p>
+                    I'm a passionate full-stack developer with a deep love for creating 
+                    innovative digital solutions. With over 3 years of experience, I've 
+                    dedicated myself to mastering the art of web development and software engineering.
+                  </p>
+                  <p>
+                    My journey in technology started with curiosity and has evolved into 
+                    a career focused on building scalable, user-friendly applications that 
+                    solve real-world problems. I believe in writing clean, maintainable code 
+                    and staying at the forefront of emerging technologies.
+                  </p>
+                  <p>
+                    When I'm not coding, you can find me exploring new technologies, 
+                    contributing to open-source projects, or sharing knowledge with 
+                    the developer community.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center text-white">
+                    <Coffee className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">1500+</div>
+                    <div className={`text-sm ${mutedText}`}>Cups of Coffee</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white">
+                    <Code className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">50K+</div>
+                    <div className={`text-sm ${mutedText}`}>Lines of Code</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center text-white">
+                    <Heart className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">100%</div>
+                    <div className={`text-sm ${mutedText}`}>Passion</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 flex items-center justify-center text-white">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">24/7</div>
+                    <div className={`text-sm ${mutedText}`}>Learning</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4 pt-4">
+                <Button 
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                  onClick={() => scrollToSection('projects')}
+                >
+                  View My Work
+                </Button>
+                <Button 
+                  variant="outline"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Get In Touch
+                </Button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={aboutInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative">
+                <div className={`w-80 h-80 mx-auto rounded-2xl ${
+                  isDarkMode 
+                    ? "bg-gradient-to-br from-gray-800 to-gray-900" 
+                    : "bg-gradient-to-br from-gray-100 to-gray-200"
+                } border ${borderColor} shadow-2xl overflow-hidden`}>
+                  <img 
+                    src="https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg" 
+                    alt="Matthew Balinton" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Floating elements */}
+                <motion.div
+                  animate={{ 
+                    y: [0, -10, 0],
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className={`absolute -top-4 -right-4 w-16 h-16 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center text-white shadow-lg`}
+                >
+                  <Code2 className="w-6 h-6" />
+                </motion.div>
+                
+                <motion.div
+                  animate={{ 
+                    y: [0, 10, 0],
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                  className={`absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-lg`}
+                >
+                  <Brain className="w-6 h-6" />
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -714,7 +797,7 @@ const App = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
-                Enterprise Projects
+                Projects
               </span>
             </h2>
             <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
@@ -829,7 +912,7 @@ const App = () => {
               </span>
             </h2>
             <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
-              From concept to production - building enterprise solutions with modern technology stacks
+              From concept to production - building solutions with modern technology stacks
             </p>
           </motion.div>
 
@@ -999,7 +1082,7 @@ const App = () => {
               </span>
             </h2>
             <p className={`text-lg ${mutedText} max-w-2xl mx-auto`}>
-              Ready to build something extraordinary? Let's discuss your enterprise solution.
+              Ready to build something extraordinary? Let's discuss your solution.
             </p>
           </motion.div>
 
@@ -1097,19 +1180,19 @@ const App = () => {
                       <p className={`font-bold text-lg mb-1 ${
                         isDarkMode ? "text-white" : "text-gray-900"
                       }`}>Email</p>
-                      <p className={`text-sm ${mutedText}`}>matthew.balinton@example.com</p>
+                      <p className={`text-sm ${mutedText}`}>matbalinton@gmail.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-5 p-4 rounded-xl border border-purple-500/20 bg-purple-500/10">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white">
                       <MapPin className="w-5 h-5" />
-                    </div>
+                    </div>  
                     <div>
                       <p className={`font-bold text-lg mb-1 ${
                         isDarkMode ? "text-white" : "text-gray-900"
                       }`}>Location</p>
-                      <p className={`text-sm ${mutedText}`}>Philippines</p>
+                      <p className={`text-sm ${mutedText}`}>Puerto Galera, Oriental Mindoro</p>
                     </div>
                   </div>
                 </CardContent>
@@ -1146,7 +1229,7 @@ const App = () => {
                       },
                       { 
                         icon: Mail, 
-                        href: "mailto:matthew.balinton@example.com", 
+                        href: "matbalinton@gmail.com", 
                         label: "Email",
                         description: "Direct contact"
                       }
@@ -1192,12 +1275,12 @@ const App = () => {
                   <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     Matthew Balinton
                   </div>
-                  <div className={`text-sm ${mutedText}`}>Enterprise Full Stack Developer</div>
+                  <div className={`text-sm ${mutedText}`}>Full Stack Developer</div>
                 </div>
               </div>
               <p className={`text-sm ${
                 isDarkMode ? "text-gray-500" : "text-gray-600"
-              } italic`}>Building the future of enterprise software</p>
+              } italic`}>Building the future of software</p>
             </div>
             
             <div className="flex gap-4">
@@ -1229,7 +1312,7 @@ const App = () => {
             isDarkMode ? "border-gray-800" : "border-gray-300"
           } pt-8 text-center`}>
             <p className={`text-sm ${mutedText}`}>
-              &copy; {new Date().getFullYear()} Matthew Balinton. Crafted with precision for enterprise excellence.
+              &copy; {new Date().getFullYear()} Matthew Balinton. Crafted with precision for excellence.
             </p>
           </div>
         </div>
