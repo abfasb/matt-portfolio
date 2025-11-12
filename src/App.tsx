@@ -124,7 +124,6 @@ const App = () => {
     setIsNavOpen(false);
   };
 
-  // Professional Color Scheme
   const bgColor = isDarkMode ? "bg-gray-950" : "bg-white";
   const textColor = isDarkMode ? "text-gray-100" : "text-gray-900";
   const secondaryTextColor = isDarkMode ? "text-gray-400" : "text-gray-600";
@@ -152,7 +151,7 @@ const App = () => {
 
   const projects = [
     {
-      title: "DILG Calapan City - Document Management System",
+      title: "DILG Calapan City - AI Driven Document Management System",
       description: "Government-grade document management system with AI-powered classification, intelligent search, and real-time analytics dashboard for streamlined municipal operations.",
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       github: "https://github.com/abfasb/dilg-calapan-capstone-backend",
