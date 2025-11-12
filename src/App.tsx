@@ -328,13 +328,11 @@ const App = () => {
         </div>
       </div>
 
-      {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 origin-left z-50"
         style={{ scaleX }}
       />
 
-      {/* Professional Navigation */}
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -1105,7 +1103,7 @@ const App = () => {
                     </label>
                     <Input 
                       id="name" 
-                      placeholder="John Doe" 
+                      placeholder="Matthew Balinton" 
                       className={`border ${
                         isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
                       } transition-all duration-300 h-12 rounded-xl`}
@@ -1120,7 +1118,7 @@ const App = () => {
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="john@example.com" 
+                      placeholder="matbalinton@gmail.com" 
                       className={`border ${
                         isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
                       } transition-all duration-300 h-12 rounded-xl`}
@@ -1134,7 +1132,7 @@ const App = () => {
                     </label>
                     <Textarea 
                       id="message" 
-                      placeholder="Tell me about your project or idea..." 
+                      placeholder="What enhancement can I add in my portfolio..." 
                       rows={6}
                       className={`border ${
                         isDarkMode ? "border-gray-700 focus:border-blue-500 bg-gray-800" : "border-gray-300 focus:border-blue-500 bg-gray-50"
