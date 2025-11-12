@@ -200,6 +200,8 @@ const App = () => {
     }
   ];
 
+
+
   const experiences = [
     {
       role: "Full Stack Developer",
@@ -288,7 +290,6 @@ const App = () => {
 
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
-      {/* Enhanced Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className={`absolute inset-0 ${
           isDarkMode 
@@ -296,14 +297,12 @@ const App = () => {
             : "bg-gradient-to-br from-gray-50 via-blue-50 to-gray-50"
         }`}></div>
         
-        {/* Subtle Grid */}
         <div className={`absolute inset-0 opacity-20 ${
           isDarkMode 
             ? "bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]" 
             : "bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)]"
         } bg-[size:64px_64px]`}></div>
 
-        {/* Subtle Particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
