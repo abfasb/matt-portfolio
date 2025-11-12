@@ -55,7 +55,6 @@ import {
   Coffee
 } from 'lucide-react';
 
-
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -138,8 +137,11 @@ const App = () => {
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-600";
   const accentText = isDarkMode ? "text-gray-300" : "text-gray-700";
 
+  // Fixed navigation colors for light mode
   const navTextColor = isDarkMode ? "text-gray-100" : "text-gray-900";
   const navHoverColor = isDarkMode ? "hover:text-white" : "hover:text-blue-600";
+  const navActiveColor = isDarkMode ? "text-white" : "text-blue-600";
+  const navIconColor = isDarkMode ? "text-gray-100" : "text-gray-700";
 
   const navSections = [
     { id: 'home', label: 'Home', icon: <Cpu className="w-4 h-4" />, gradient: 'from-blue-600 to-cyan-600' },
@@ -200,8 +202,6 @@ const App = () => {
     }
   ];
 
-
-
   const experiences = [
     {
       role: "Full Stack Developer",
@@ -211,7 +211,7 @@ const App = () => {
       tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
       icon: <Code2 className="w-5 h-5" />,
       color: "from-blue-600 to-cyan-700",
-      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects",],
+      achievements: ["Built 15+ production applications", "Integrated AI/ML in 8 projects"],
       type: "Professional"
     },
     {
@@ -370,12 +370,14 @@ const App = () => {
                   transition={{ delay: idx * 0.1 }}
                   className={`relative px-6 py-3 transition-all duration-300 ${navTextColor} ${
                     activeSection === item.id 
-                      ? 'text-white' 
+                      ? navActiveColor 
                       : `${navHoverColor}`
                   }`}
                   onClick={() => scrollToSection(item.id)}
                 >
-                  <div className="flex items-center space-x-2">
+                  <div className={`flex items-center space-x-2 ${
+                    activeSection === item.id ? navActiveColor : navIconColor
+                  }`}>
                     {item.icon}
                     <span className="font-medium text-sm">{item.label}</span>
                   </div>
@@ -476,7 +478,7 @@ const App = () => {
                     </div>
                     <span className={`font-medium ${
                       activeSection === item.id 
-                        ? 'text-white' 
+                        ? navActiveColor
                         : navTextColor
                     }`}>{item.label}</span>
                   </motion.button>
