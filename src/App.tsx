@@ -1182,7 +1182,7 @@ const App = () => {
                         label: "Email",
                         description: "Direct contact"
                       }
-                    ].map((social, idx) => (
+                    ].map((social) => (
                       <Button
                         key={social.label}
                         variant="outline"
@@ -1267,7 +1267,6 @@ const App = () => {
         </div>
       </footer>
 
-      {/* Scroll to top button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ 
