@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg" />
+    <link rel="icon" type="image/svg+xml" id="favicon" href="https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" style="border-radius: 50%;" />
     <title>Portfolio</title>
   </head>
@@ -10,4 +10,30 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+
+  <script>
+       function makeFaviconRounded() {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.src = "https://i.ibb.co/8gRDWFTf/Matt-ID-1-1.jpg";
+    
+        img.onload = function () {
+          const canvas = document.createElement("canvas");
+          const size = 64; 
+          canvas.width = size;
+          canvas.height = size;
+          const ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, size, size);
+          ctx.beginPath();
+          ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(img, 0, 0, size, size);
+          const newFavicon = document.getElementById("favicon");
+          newFavicon.href = canvas.toDataURL("image/png");
+        };
+      }
+    
+      makeFaviconRounded();
+  </script>
 </html>

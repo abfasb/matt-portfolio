@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, useInView, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,22 +11,17 @@ import {
   Mail, 
   ExternalLink,
   Calendar,
-  Award,
   Code2,
-  ChevronRight,
   Download,
   ArrowUp,
   MapPin,
-  Briefcase,
+  User,
   GraduationCap,
   Zap,
   Target,
-  Users,
   TrendingUp,
   Rocket,
-  Star,
   Brain,
-  Globe,
   Moon,
   Sun,
   Menu,
@@ -34,23 +29,16 @@ import {
   Cpu,
   Database,
   Cloud,
-  Terminal,
   Workflow,
   Shield,
   Server,
   Layers,
   Code,
-  FileCode,
   Network,
-  Sparkles,
   ArrowRight,
   CheckCircle,
   Clock,
-  BarChart3,
-  Smartphone,
   Monitor,
-  CloudLightning,
-  User,
   Heart,
   Coffee
 } from 'lucide-react';
@@ -125,19 +113,14 @@ const App = () => {
 
   const bgColor = isDarkMode ? "bg-gray-950" : "bg-white";
   const textColor = isDarkMode ? "text-gray-100" : "text-gray-900";
-  const secondaryTextColor = isDarkMode ? "text-gray-400" : "text-gray-600";
   const cardBg = isDarkMode ? "bg-gray-900/80" : "bg-white/90";
   const borderColor = isDarkMode ? "border-gray-800" : "border-gray-200";
   const navBg = isDarkMode ? "bg-gray-950/98" : "bg-white/98";
-  const inputBg = isDarkMode ? "bg-gray-900" : "bg-gray-50";
-  const hoverBg = isDarkMode ? "hover:bg-gray-800" : "hover:bg-gray-100";
   
   const sectionBg = isDarkMode ? "bg-gray-950" : "bg-gray-50";
   const cardBorder = isDarkMode ? "border-gray-800" : "border-gray-200";
   const mutedText = isDarkMode ? "text-gray-400" : "text-gray-600";
-  const accentText = isDarkMode ? "text-gray-300" : "text-gray-700";
 
-  // Fixed navigation colors for light mode
   const navTextColor = isDarkMode ? "text-gray-100" : "text-gray-900";
   const navHoverColor = isDarkMode ? "hover:text-white" : "hover:text-blue-600";
   const navActiveColor = isDarkMode ? "text-white" : "text-blue-600";
@@ -155,7 +138,7 @@ const App = () => {
     {
       title: "DILG Calapan City - AI Driven Document Management System",
       description: "Government-grade document management system with AI-powered classification, intelligent search, and real-time analytics dashboard for streamlined municipal operations.",
-      tech: ["React", "TypeScript", "Next.js", "PostgreSQL", "Prisma", "AI/ML"],
+      tech: ["React", "TypeScript", "Cloud Storage", "Firebase", "Mongodb", "AI/ML"],
       github: "https://github.com/abfasb/dilg-calapan-capstone-backend",
       live: "https://dilg-calapan.vercel.app",
       category: "Government SaaS",
@@ -264,29 +247,6 @@ const App = () => {
     }
   ];
 
-  const achievements = [
-    {
-      title: "Hack4Gov Mimaropa Finalist",
-      year: "2024-2025",
-      description: "Selected as finalist in prestigious regional government innovation hackathon",
-      icon: <Award className="w-4 h-4" />,
-      color: "from-yellow-600 to-orange-600"
-    },
-    {
-      title: "Open Source Contributor",
-      year: "2023-Present",
-      description: "Active contributor to major open source projects and developer communities",
-      icon: <Code className="w-4 h-4" />,
-      color: "from-blue-600 to-indigo-600"
-    },
-    {
-      title: "Technical Excellence Awards",
-      year: "2012-2016",
-      description: "Multiple-time recipient of computer science and technical excellence awards",
-      icon: <Star className="w-4 h-4" />,
-      color: "from-purple-600 to-pink-600"
-    }
-  ];
 
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
@@ -360,7 +320,6 @@ const App = () => {
               </div>
             </motion.div>
 
-            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-1">
               {navSections.map((item, idx) => (
                 <motion.button
@@ -392,9 +351,7 @@ const App = () => {
               ))}
             </div>
 
-            {/* Right Side Controls */}
             <div className="flex items-center space-x-4">
-              {/* Theme Toggle */}
               <motion.button
                 onClick={toggleTheme}
                 whileHover={{ scale: 1.05 }}
@@ -408,7 +365,6 @@ const App = () => {
                 {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </motion.button>
 
-              {/* Resume Button */}
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -440,7 +396,6 @@ const App = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -654,7 +609,7 @@ const App = () => {
                 <div className={`space-y-4 ${mutedText} leading-relaxed`}>
                   <p>
                     I'm a passionate full-stack developer with a deep love for creating 
-                    innovative digital solutions. With over 3 years of experience, I've 
+                    innovative digital solutions. With over 1 year of experience, I've 
                     dedicated myself to mastering the art of web development and software engineering.
                   </p>
                   <p>
@@ -686,7 +641,7 @@ const App = () => {
                     <Code className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="font-semibold">50K+</div>
+                    <div className="font-semibold">10K+</div>
                     <div className={`text-sm ${mutedText}`}>Lines of Code</div>
                   </div>
                 </div>
